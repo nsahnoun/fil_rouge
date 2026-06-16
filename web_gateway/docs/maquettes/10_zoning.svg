@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700">
+  <style>
+    text { font-family: sans-serif; }
+    .title { font-size: 22px; font-weight: bold; fill: #1a1a2e; }
+    .subtitle { font-size: 14px; fill: #666; }
+    .label { font-size: 12px; fill: #555; }
+    .val { font-size: 14px; fill: #222; }
+    .border { fill: none; stroke: #ddd; stroke-width: 1.5; }
+    .border-dark { fill: none; stroke: #999; stroke-width: 1.5; }
+    .fill-light { fill: #f5f5f8; }
+    .fill-white { fill: #fff; }
+    .fill-blue { fill: #e8f0fe; }
+    .fill-green { fill: #e6f4ea; }
+    .fill-yellow { fill: #fef7e0; }
+    .fill-red { fill: #fce8e6; }
+    .accent { fill: #1a73e8; }
+    .accent-text { fill: #fff; font-size: 13px; font-weight: bold; }
+    .icon-box { fill: none; stroke: #bbb; stroke-width: 1.5; rx: 4; }
+    .line { fill: none; stroke: #e0e0e0; stroke-width: 1; }
+    .line-dark { fill: none; stroke: #ccc; stroke-width: 1; }
+  </style>
+
+  <style>
+    .z-box { fill: none; stroke: #333; stroke-width: 2; }
+    .z-label { font-size: 13px; font-weight: bold; fill: #333; text-anchor: middle; }
+    .z-sub { font-size: 11px; fill: #666; text-anchor: middle; }
+    .z-accent { fill: #e8f0fe; stroke: #1a73e8; stroke-width: 2; }
+    .z-content { fill: #f9f9fb; stroke: #999; stroke-width: 1.5; }
+  </style>
+  <rect x="0" y="0" width="220" height="700" class="z-box" rx="0" ry="0"/>
+  <text x="110" y="25" class="z-label">SIDEBAR</text>
+  <text x="110" y="42" class="z-sub">Navigation principale</text>
+  <line x1="20" y1="55" x2="200" y2="55" class="line"/>
+  <rect x="20" y="65" width="180" height="28" class="z-content" rx="0" ry="0"/>
+  <text x="110" y="84" class="z-sub">Dashboard</text>
+  <rect x="20" y="100" width="180" height="28" class="z-content" rx="0" ry="0"/>
+  <text x="110" y="119" class="z-sub">Patients</text>
+  <rect x="20" y="135" width="180" height="28" class="z-content" rx="0" ry="0"/>
+  <text x="110" y="154" class="z-sub">Analyses</text>
+  <rect x="20" y="170" width="180" height="28" class="z-content" rx="0" ry="0"/>
+  <text x="110" y="189" class="z-sub">Rapports</text>
+  <rect x="20" y="205" width="180" height="28" class="z-content" rx="0" ry="0"/>
+  <text x="110" y="224" class="z-sub">Admin</text>
+  <rect x="220" y="0" width="780" height="55" class="z-box" rx="0" ry="0"/>
+  <text x="610" y="25" class="z-label">HEADER</text>
+  <text x="610" y="42" class="z-sub">Titre de page, profil utilisateur</text>
+  <rect x="220" y="55" width="780" height="580" class="z-box" rx="0" ry="0"/>
+  <text x="610" y="80" class="z-label">ZONE DE CONTENU PRINCIPAL</text>
+  <text x="610" y="97" class="z-sub">Contenu variable selon la page active</text>
+  <rect x="260" y="115" width="220" height="100" class="z-content" rx="0" ry="0"/>
+  <text x="370" y="155" class="z-sub">Carte Statistique</text>
+  <rect x="500" y="115" width="220" height="100" class="z-content" rx="0" ry="0"/>
+  <text x="610" y="155" class="z-sub">Carte Statistique</text>
+  <rect x="740" y="115" width="220" height="100" class="z-content" rx="0" ry="0"/>
+  <text x="850" y="155" class="z-sub">Carte Statistique</text>
+  <rect x="260" y="240" width="700" height="300" class="z-content" rx="0" ry="0"/>
+  <text x="610" y="280" class="z-sub">Tableau / Liste</text>
+  <rect x="280" y="300" width="660" height="28" class="fill-white border" rx="0" ry="0"/>
+  <rect x="280" y="335" width="660" height="28" class="fill-white border" rx="0" ry="0"/>
+  <rect x="280" y="370" width="660" height="28" class="fill-white border" rx="0" ry="0"/>
+  <rect x="280" y="405" width="660" height="28" class="fill-white border" rx="0" ry="0"/>
+  <rect x="280" y="440" width="660" height="28" class="fill-white border" rx="0" ry="0"/>
+  <rect x="280" y="475" width="660" height="28" class="fill-white border" rx="0" ry="0"/>
+  <rect x="220" y="635" width="780" height="65" class="z-box" rx="0" ry="0"/>
+  <text x="610" y="665" class="z-sub">ZONE D'ACTION</text>
+  <text x="610" y="682" class="z-sub">Boutons, pagination, statut</text>
+  <rect x="30" y="520" width="160" height="120" class="fill-white border" rx="8" ry="8"/>
+  <text x="110" y="540" class="z-label">Légende</text>
+  <rect x="40" y="555" width="20" height="10" class="z-box" rx="0" ry="0"/>
+  <text x="120" y="564" class="z-sub">Limite de zone</text>
+  <rect x="40" y="575" width="20" height="10" class="z-content" rx="0" ry="0"/>
+  <text x="120" y="584" class="z-sub">Sous-zone</text>
+  <rect x="40" y="595" width="20" height="10" class="z-accent" rx="0" ry="0"/>
+  <text x="120" y="604" class="z-sub">Élément actif</text>
+</svg>

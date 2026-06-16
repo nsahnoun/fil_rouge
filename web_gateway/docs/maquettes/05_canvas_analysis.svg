@@ -1,0 +1,128 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+ <style>text { font-family: sans-serif; }
+    .title { font-size: 22px; font-weight: bold; fill: #1a1a2e; }
+    .subtitle { font-size: 14px; fill: #666; }
+    .label { font-size: 12px; fill: #555; }
+    .val { font-size: 14px; fill: #222; }
+    .border { fill: none; stroke: #ddd; stroke-width: 1.5; }
+    .border-dark { fill: none; stroke: #999; stroke-width: 1.5; }
+    .fill-light { fill: #f5f5f8; }
+    .fill-white { fill: #fff; }
+    .fill-blue { fill: #e8f0fe; }
+    .fill-green { fill: #e6f4ea; }
+    .fill-yellow { fill: #fef7e0; }
+    .fill-red { fill: #fce8e6; }
+    .accent { fill: #1a73e8; }
+    .accent-text { fill: #fff; font-size: 13px; font-weight: bold; }
+    .icon-box { fill: none; stroke: #bbb; stroke-width: 1.5; rx: 4; }
+    .line { fill: none; stroke: #e0e0e0; stroke-width: 1; }
+    .line-dark { fill: none; stroke: #ccc; stroke-width: 1; }</style>
+
+ <!-- Sidebar -->
+ <!-- Nav items -->
+ <!-- Header -->
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="602" width="802" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_1" class="fill-light border" height="800" width="220" y="0" x="0"/>
+  <rect id="svg_2" fill="#1a1a2e" height="60" width="220" y="0" x="0"/>
+  <text id="svg_3" fill="#fff" font-weight="bold" font-size="18" y="38" x="30">OrthoAnalyse</text>
+  <rect id="svg_4" rx="6" fill="transparent" height="40" width="200" y="80" x="10"/>
+  <text id="svg_5" font-weight="normal" font-size="14" fill="#444" y="105" x="30">Dashboard</text>
+  <rect id="svg_6" rx="6" fill="transparent" height="40" width="200" y="130" x="10"/>
+  <text id="svg_7" font-weight="normal" font-size="14" fill="#444" y="155" x="30">Patients</text>
+  <rect id="svg_8" rx="6" fill="#e8f0fe" height="40" width="200" y="180" x="10"/>
+  <text id="svg_9" font-weight="bold" font-size="14" fill="#1a73e8" y="205" x="30">Analyses</text>
+  <rect id="svg_10" rx="6" fill="transparent" height="40" width="200" y="230" x="10"/>
+  <text id="svg_11" font-weight="normal" font-size="14" fill="#444" y="255" x="30">Rapports</text>
+  <rect id="svg_12" rx="6" fill="transparent" height="40" width="200" y="280" x="10"/>
+  <text id="svg_13" font-weight="normal" font-size="14" fill="#444" y="305" x="30">Admin</text>
+  <rect id="svg_14" rx="6" fill="transparent" height="40" width="200" y="330" x="10"/>
+  <text id="svg_15" font-weight="normal" font-size="14" fill="#444" y="355" x="30">Paramètres</text>
+  <rect id="svg_16" class="fill-white border" height="60" width="980" y="0" x="220"/>
+  <text id="svg_17" class="title" y="35" x="250">Analyse céphalométrique</text>
+  <text id="svg_18" class="val" text-anchor="end" y="35" x="1100">Dr. Dupont</text>
+  <rect id="svg_19" rx="12" class="icon-box" height="24" width="40" y="18" x="1130"/>
+  <text id="svg_20" font-size="11" class="label" text-anchor="middle" y="35" x="1150">EN</text>
+  <rect id="svg_21" ry="8" rx="8" class="fill-white border" height="50" width="700" y="80" x="250"/>
+  <rect id="svg_22" ry="6" rx="6" class="fill-light border" height="35" width="90" y="87" x="270"/>
+  <text id="svg_23" class="val" y="111" x="273">✏️ Dessiner</text>
+  <rect stroke="null" id="svg_24" ry="6" rx="6" class="fill-light border" height="35" width="113.999999" y="87" x="370"/>
+  <text id="svg_25" class="val" y="109" x="415">📍 Points</text>
+  <rect stroke="null" id="svg_26" ry="6" rx="6" class="fill-light border" height="35" width="97.999998" y="87" x="494"/>
+  <text id="svg_27" class="val" y="109" x="515">📏 Mesure</text>
+  <rect stroke="null" id="svg_28" ry="6" rx="6" class="fill-light border" height="35" width="86.999997" y="87" x="601.000002"/>
+  <text id="svg_29" class="val" y="109" x="615">↩️ Annuler</text>
+  <rect id="svg_30" ry="6" rx="6" class="fill-light border" height="35" width="90" y="87" x="698"/>
+  <text id="svg_31" class="val" y="109" x="715">🔄 Reset</text>
+  <rect id="svg_32" ry="4" rx="4" class="fill-white border" height="520" width="530" y="145" x="250"/>
+  <rect id="svg_33" ry="2" rx="2" class="fill-light" height="500" width="510" y="155" x="260"/>
+  <text id="svg_34" class="subtitle" y="410" x="515">[Image radiologique]</text>
+  <text id="svg_35" class="subtitle" y="430" x="515">Téléradiographie de profil</text>
+  <rect id="svg_36" ry="4" rx="4" class="accent" height="8" width="8" y="232" x="607"/>
+  <rect id="svg_37" ry="4" rx="4" class="accent" height="8" width="8" y="554" x="292"/>
+  <rect id="svg_38" ry="4" rx="4" class="accent" height="8" width="8" y="300" x="420"/>
+  <rect id="svg_39" ry="4" rx="4" class="accent" height="8" width="8" y="246" x="394"/>
+  <rect id="svg_40" ry="4" rx="4" class="accent" height="8" width="8" y="227" x="657"/>
+  <rect id="svg_41" ry="4" rx="4" class="accent" height="8" width="8" y="554" x="626"/>
+  <rect id="svg_42" ry="4" rx="4" class="accent" height="8" width="8" y="454" x="736"/>
+  <rect id="svg_43" ry="4" rx="4" class="accent" height="8" width="8" y="477" x="324"/>
+  <rect id="svg_44" ry="4" rx="4" class="accent" height="8" width="8" y="191" x="496"/>
+  <rect id="svg_45" ry="4" rx="4" class="accent" height="8" width="8" y="222" x="295"/>
+  <rect id="svg_46" ry="4" rx="4" class="accent" height="8" width="8" y="294" x="391"/>
+  <rect id="svg_47" ry="4" rx="4" class="accent" height="8" width="8" y="483" x="538"/>
+  <rect id="svg_48" ry="4" rx="4" class="accent" height="8" width="8" y="462" x="293"/>
+  <rect id="svg_49" ry="4" rx="4" class="accent" height="8" width="8" y="541" x="381"/>
+  <rect id="svg_50" ry="4" rx="4" class="accent" height="8" width="8" y="534" x="612"/>
+  <rect id="svg_51" ry="4" rx="4" class="accent" height="8" width="8" y="389" x="559"/>
+  <rect id="svg_52" ry="4" rx="4" class="accent" height="8" width="8" y="404" x="392"/>
+  <rect id="svg_53" ry="4" rx="4" class="accent" height="8" width="8" y="317" x="581"/>
+  <rect id="svg_54" ry="4" rx="4" class="accent" height="8" width="8" y="620" x="694"/>
+  <rect id="svg_55" ry="4" rx="4" class="accent" height="8" width="8" y="563" x="283"/>
+  <rect id="svg_56" ry="4" rx="4" class="accent" height="8" width="8" y="256" x="692"/>
+  <rect id="svg_57" ry="4" rx="4" class="accent" height="8" width="8" y="391" x="637"/>
+  <rect id="svg_58" ry="4" rx="4" class="accent" height="8" width="8" y="317" x="454"/>
+  <rect id="svg_59" ry="4" rx="4" class="accent" height="8" width="8" y="285" x="359"/>
+  <rect id="svg_60" ry="4" rx="4" class="accent" height="8" width="8" y="347" x="670"/>
+  <rect id="svg_61" ry="4" rx="4" class="accent" height="8" width="8" y="222" x="332"/>
+  <rect id="svg_62" ry="4" rx="4" class="accent" height="8" width="8" y="224" x="474"/>
+  <rect id="svg_63" ry="4" rx="4" class="accent" height="8" width="8" y="608" x="463"/>
+  <rect id="svg_64" ry="4" rx="4" class="accent" height="8" width="8" y="484" x="456"/>
+  <rect id="svg_65" ry="4" rx="4" class="accent" height="8" width="8" y="588" x="415"/>
+  <rect id="svg_66" ry="4" rx="4" class="accent" height="8" width="8" y="548" x="302"/>
+  <rect id="svg_67" ry="4" rx="4" class="accent" height="8" width="8" y="449" x="515"/>
+  <rect id="svg_68" ry="8" rx="8" class="fill-white border" height="520" width="200" y="145" x="800"/>
+  <text id="svg_69" class="title" y="175" x="830">Mesures</text>
+  <line id="svg_70" class="line" y2="195" x2="980" y1="195" x1="820"/>
+  <text id="svg_71" class="val" y="213" x="830">SNA</text>
+  <text id="svg_72" class="label" y="213" x="940">82°</text>
+  <text id="svg_73" class="subtitle" y="230" x="900">Norme: 82°</text>
+  <line id="svg_74" class="line" y2="235" x2="980" y1="235" x1="820"/>
+  <text id="svg_75" class="val" y="253" x="830">SNB</text>
+  <text id="svg_76" class="label" y="253" x="940">78°</text>
+  <text id="svg_77" class="subtitle" y="270" x="900">Norme: 80°</text>
+  <line id="svg_78" class="line" y2="275" x2="980" y1="275" x1="820"/>
+  <text id="svg_79" class="val" y="293" x="830">ANB</text>
+  <text id="svg_80" class="label" y="293" x="940">4°</text>
+  <text id="svg_81" class="subtitle" y="310" x="900">Norme: 2°</text>
+  <line id="svg_82" class="line" y2="315" x2="980" y1="315" x1="820"/>
+  <text id="svg_83" class="val" y="333" x="830">FMA</text>
+  <text id="svg_84" class="label" y="333" x="940">25°</text>
+  <text id="svg_85" class="subtitle" y="350" x="900">Norme: 25°</text>
+  <line id="svg_86" class="line" y2="355" x2="980" y1="355" x1="820"/>
+  <text id="svg_87" class="val" y="373" x="830">IMPA</text>
+  <text id="svg_88" class="label" y="373" x="940">90°</text>
+  <text id="svg_89" class="subtitle" y="390" x="900">Norme: 90°</text>
+  <line id="svg_90" class="line" y2="395" x2="980" y1="395" x1="820"/>
+  <text id="svg_91" class="val" y="413" x="830">1-NA</text>
+  <text id="svg_92" class="label" y="413" x="940">22°</text>
+  <text id="svg_93" class="subtitle" y="430" x="900">Norme: 22°</text>
+  <rect id="svg_94" ry="6" rx="6" class="fill-light border" height="40" width="700" y="680" x="250"/>
+  <text id="svg_95" class="subtitle" y="705" x="270">Patient: Sophie Martin • Radio: T3-Profil • 32 landmarks • Non validé</text>
+  <rect id="svg_96" ry="6" rx="6" class="accent" height="25" width="130" y="687" x="800"/>
+  <text id="svg_97" class="accent-text" y="703" x="814">Valider l'analyse</text>
+ </g>
+</svg>

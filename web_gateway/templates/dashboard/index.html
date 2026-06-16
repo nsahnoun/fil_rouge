@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="page-header">
+    <h1>Tableau de bord</h1>
+</div>
+
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-icon">👤</div>
+        <div class="stat-value">{{ stats.patients }}</div>
+        <div class="stat-label">Patients</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">🔬</div>
+        <div class="stat-value">{{ stats.analyses }}</div>
+        <div class="stat-label">Analyses</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">✅</div>
+        <div class="stat-value">{{ stats.validated_analyses }}</div>
+        <div class="stat-label">Validées</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">📄</div>
+        <div class="stat-value">{{ stats.reports }}</div>
+        <div class="stat-label">Rapports</div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h2>Activité récente</h2>
+    </div>
+    <div id="recent-activity">
+        {% if recent_activity and recent_activity[0].id > 0 %}
+        <div class="table-wrapper">
+            <table class="table">
+                <thead>
+                    <tr><th>Utilisateur</th><th>Action</th><th>Ressource</th><th>Date</th></tr>
+                </thead>
+                <tbody>
+                    {% for a in recent_activity %}
+                    <tr>
+                        <td>{{ a.user_name }}</td>
+                        <td>{{ a.action }}</td>
+                        <td>{{ a.resource_type }} #{{ a.resource_id }}</td>
+                        <td>{{ a.created_at[:16] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <div class="empty-state">
+            <p>{{ recent_activity[0].action if recent_activity else 'Aucune activité' }}</p>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+{% block extra_js %}
+<script>
+fetch('/api/admin/stats').then(r => r.json()).then(s => {
+    document.querySelectorAll('.stat-value')[0].textContent = s.patients;
+    document.querySelectorAll('.stat-value')[1].textContent = s.analyses;
+    document.querySelectorAll('.stat-value')[2].textContent = s.validated_analyses;
+    document.querySelectorAll('.stat-value')[3].textContent = s.reports;
+});
+</script>
+{% endblock %}

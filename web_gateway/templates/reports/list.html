@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Rapports{% endblock %}
+{% block content %}
+<div class="page-header">
+    <h1>Rapports <span class="text-muted" style="font-size:14px;font-weight:400">({{ total }})</span></h1>
+</div>
+<div class="card">
+    {% if reports %}
+    <div class="table-wrapper">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Patient</th>
+                    <th>Type</th>
+                    <th>Statut</th>
+                    <th>Signé</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for r in reports %}
+                <tr>
+                    <td>{{ r.id }}</td>
+                    <td><a href="/patients/{{ r.patient_id }}" style="color:var(--accent);text-decoration:none">{{ r.patient_name }}</a></td>
+                    <td>{{ r.report_type }}</td>
+                    <td><span class="badge badge-{{ r.status }}">{{ r.status }}</span></td>
+                    <td>{{ 'Oui' if r.signed_by else 'Non' }}</td>
+                    <td>{{ r.created_at[:10] if r.created_at else '—' }}</td>
+                    <td>
+                        <a href="/reports/{{ r.id }}" class="btn btn-sm btn-secondary">Détail</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="pagination">
+        {% if page_offset > 0 %}
+        <a href="/reports?offset={{ page_offset - page_limit }}&limit={{ page_limit }}" class="btn btn-sm btn-secondary">← Précédent</a>
+        {% endif %}
+        <span style="font-size:12px;color:var(--text-muted);padding:0 8px">
+            {{ page_offset + 1 }}–{{ page_offset + reports|length }} / {{ total }}
+        </span>
+        {% if has_more %}
+        <a href="/reports?offset={{ page_offset + page_limit }}&limit={{ page_limit }}" class="btn btn-sm btn-secondary">Suivant →</a>
+        {% endif %}
+    </div>
+    {% else %}
+    <div class="empty-state">
+        <div class="icon">📄</div>
+        <p>Aucun rapport généré pour le moment.</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

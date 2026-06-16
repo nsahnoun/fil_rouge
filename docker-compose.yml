@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  gateway:
+    build: ./web_gateway
+    ports:
+      - "8001:8001"
+    environment:
+      - CEPH_API_URL=http://ceph_api:8000
+      - DATABASE_URL=sqlite+aiosqlite:///app/data/ceph.db
+      - SECRET_KEY=change-me-in-production
+    volumes:
+      - gateway_data:/app/data
+      - gateway_reports:/app/reports
+    depends_on:
+      - ceph_api
+      - redis
+
+  ceph_api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/app/models
+    environment:
+      - MODEL_PATH=best_hrnet_w64_800px.keras
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./web_gateway/static:/static:ro
+    depends_on:
+      - gateway
+
+volumes:
+  gateway_data:
+  gateway_reports:

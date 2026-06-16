@@ -1,0 +1,85 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+ <style>text { font-family: sans-serif; }
+    .title { font-size: 22px; font-weight: bold; fill: #1a1a2e; }
+    .subtitle { font-size: 14px; fill: #666; }
+    .label { font-size: 12px; fill: #555; }
+    .val { font-size: 14px; fill: #222; }
+    .border { fill: none; stroke: #ddd; stroke-width: 1.5; }
+    .border-dark { fill: none; stroke: #999; stroke-width: 1.5; }
+    .fill-light { fill: #f5f5f8; }
+    .fill-white { fill: #fff; }
+    .fill-blue { fill: #e8f0fe; }
+    .fill-green { fill: #e6f4ea; }
+    .fill-yellow { fill: #fef7e0; }
+    .fill-red { fill: #fce8e6; }
+    .accent { fill: #1a73e8; }
+    .accent-text { fill: #fff; font-size: 13px; font-weight: bold; }
+    .icon-box { fill: none; stroke: #bbb; stroke-width: 1.5; rx: 4; }
+    .line { fill: none; stroke: #e0e0e0; stroke-width: 1; }
+    .line-dark { fill: none; stroke: #ccc; stroke-width: 1; }</style>
+
+ <!-- Sidebar -->
+ <!-- Nav items -->
+ <!-- Header -->
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="602" width="802" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_1" class="fill-light border" height="800" width="220" y="0" x="0"/>
+  <rect id="svg_2" fill="#1a1a2e" height="60" width="220" y="0" x="0"/>
+  <text id="svg_3" fill="#fff" font-weight="bold" font-size="18" y="38" x="30">OrthoAnalyse</text>
+  <rect id="svg_4" rx="6" fill="transparent" height="40" width="200" y="80" x="10"/>
+  <text id="svg_5" font-weight="normal" font-size="14" fill="#444" y="105" x="30">Dashboard</text>
+  <rect id="svg_6" rx="6" fill="#e8f0fe" height="40" width="200" y="130" x="10"/>
+  <text id="svg_7" font-weight="bold" font-size="14" fill="#1a73e8" y="155" x="30">Patients</text>
+  <rect id="svg_8" rx="6" fill="transparent" height="40" width="200" y="180" x="10"/>
+  <text id="svg_9" font-weight="normal" font-size="14" fill="#444" y="205" x="30">Analyses</text>
+  <rect id="svg_10" rx="6" fill="transparent" height="40" width="200" y="230" x="10"/>
+  <text id="svg_11" font-weight="normal" font-size="14" fill="#444" y="255" x="30">Rapports</text>
+  <rect id="svg_12" rx="6" fill="transparent" height="40" width="200" y="280" x="10"/>
+  <text id="svg_13" font-weight="normal" font-size="14" fill="#444" y="305" x="30">Admin</text>
+  <rect id="svg_14" rx="6" fill="transparent" height="40" width="200" y="330" x="10"/>
+  <text id="svg_15" font-weight="normal" font-size="14" fill="#444" y="355" x="30">Paramètres</text>
+  <rect id="svg_16" class="fill-white border" height="60" width="980" y="0" x="220"/>
+  <text id="svg_17" class="title" y="35" x="250">Sophie Martin</text>
+  <text id="svg_18" class="val" text-anchor="end" y="35" x="1066">Dr. Dupont</text>
+  <rect id="svg_19" rx="12" class="icon-box" height="24" width="40" y="18" x="1130"/>
+  <text id="svg_20" font-size="11" class="label" text-anchor="middle" y="35" x="1150">EN</text>
+  <rect id="svg_21" ry="8" rx="8" class="fill-white border" height="120" width="700" y="85" x="250"/>
+  <rect id="svg_22" ry="40" rx="40" class="fill-blue border" height="80" width="80" y="100" x="270"/>
+  <text id="svg_23" class="title" y="142" x="310">SM</text>
+  <text id="svg_24" class="title" y="125" x="370">Sophie Martin</text>
+  <text id="svg_25" class="subtitle" y="145" x="370">28 ans — F — 06 12 34 56 78</text>
+  <text id="svg_26" class="subtitle" y="165" x="370">Dossier: PAT-2024-0042 • Créé le 12/01/2025</text>
+  <rect stroke="null" id="svg_27" ry="6" rx="6" class="accent" height="30" width="80" y="105" x="863.999999"/>
+  <text id="svg_28" class="accent-text" y="125" x="880">Modifier</text>
+  <rect id="svg_29" ry="8" rx="8" class="fill-white border" height="400" width="700" y="225" x="250"/>
+  <text id="svg_30" class="title" y="255" x="280">Historique du patient</text>
+  <line id="svg_31" class="line" y2="295" x2="290" y1="265" x1="290"/>
+  <rect id="svg_32" ry="10" rx="10" class="accent" height="20" width="20" y="274" x="280"/>
+  <text id="svg_33" class="val" y="285" x="320">[15/05/2026] Rapport généré</text>
+  <text id="svg_34" class="subtitle" y="300" x="320">Rapport d'analyse T3 généré par Dr. Dupont</text>
+  <line id="svg_35" class="line" y2="335" x2="290" y1="305" x1="290"/>
+  <rect id="svg_36" ry="10" rx="10" class="accent" height="20" width="20" y="314" x="280"/>
+  <text id="svg_37" class="val" y="325" x="320">[12/05/2026] Analyse réalisée</text>
+  <text id="svg_38" class="subtitle" y="340" x="320">Analyse céphalométrique T3 — 32 landmarks détectés</text>
+  <line id="svg_39" class="line" y2="375" x2="290" y1="345" x1="290"/>
+  <rect id="svg_40" ry="10" rx="10" class="accent" height="20" width="20" y="354" x="280"/>
+  <text id="svg_41" class="val" y="365" x="320">[10/05/2026] Radio ajoutée</text>
+  <text id="svg_42" class="subtitle" y="380" x="320">Téléradiographie de profil T3 — Dr. Dupont</text>
+  <line id="svg_43" class="line" y2="415" x2="290" y1="385" x1="290"/>
+  <rect id="svg_44" ry="10" rx="10" class="accent" height="20" width="20" y="394" x="280"/>
+  <text id="svg_45" class="val" y="405" x="320">[15/03/2026] Consultation</text>
+  <text id="svg_46" class="subtitle" y="420" x="320">Consultation de suivi — Dr. Martin</text>
+  <line id="svg_47" class="line" y2="455" x2="290" y1="425" x1="290"/>
+  <rect id="svg_48" ry="10" rx="10" class="accent" height="20" width="20" y="434" x="280"/>
+  <text id="svg_49" class="val" y="445" x="320">[02/01/2026] Note clinique</text>
+  <text id="svg_50" class="subtitle" y="460" x="320">Début de traitement — Appareil multi-attaches</text>
+  <line id="svg_51" class="line" y2="495" x2="290" y1="465" x1="290"/>
+  <rect id="svg_52" ry="10" rx="10" class="accent" height="20" width="20" y="474" x="280"/>
+  <text id="svg_53" class="val" y="485" x="320">[12/01/2025] Première visite</text>
+  <text id="svg_54" class="subtitle" y="500" x="320">Création du dossier patient</text>
+ </g>
+</svg>

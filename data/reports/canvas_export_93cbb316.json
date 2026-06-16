@@ -1,0 +1,330 @@
+{
+  "image_width": 601,
+  "image_height": 800,
+  "landmarks": [
+    {
+      "id": 1,
+      "x": 393.94,
+      "y": 436.24
+    },
+    {
+      "id": 2,
+      "x": 415.04,
+      "y": 421.74
+    },
+    {
+      "id": 3,
+      "x": 339.79,
+      "y": 580.33
+    },
+    {
+      "id": 4,
+      "x": 320.91,
+      "y": 646.14
+    },
+    {
+      "id": 5,
+      "x": 410.96,
+      "y": 227.51
+    },
+    {
+      "id": 6,
+      "x": 360.33,
+      "y": 333.39
+    },
+    {
+      "id": 7,
+      "x": 339.03,
+      "y": 626.32
+    },
+    {
+      "id": 8,
+      "x": 237,
+      "y": 419.13
+    },
+    {
+      "id": 9,
+      "x": 516.68,
+      "y": 390.24
+    },
+    {
+      "id": 10,
+      "x": 124.78,
+      "y": 427.28
+    },
+    {
+      "id": 11,
+      "x": 167.26,
+      "y": 263.68
+    },
+    {
+      "id": 12,
+      "x": 116.53,
+      "y": 370.24
+    },
+    {
+      "id": 13,
+      "x": 123.32,
+      "y": 333.74
+    },
+    {
+      "id": 14,
+      "x": 333.37,
+      "y": 641.71
+    },
+    {
+      "id": 15,
+      "x": 136.34,
+      "y": 511.13
+    },
+    {
+      "id": 16,
+      "x": 81.35,
+      "y": 336
+    },
+    {
+      "id": 17,
+      "x": 312.54,
+      "y": 506.76
+    },
+    {
+      "id": 18,
+      "x": 370.08,
+      "y": 508.81
+    },
+    {
+      "id": 19,
+      "x": 291.9,
+      "y": 500.27
+    },
+    {
+      "id": 20,
+      "x": 313.06,
+      "y": 504.51
+    },
+    {
+      "id": 21,
+      "x": 377.67,
+      "y": 436.48
+    },
+    {
+      "id": 22,
+      "x": 392.68,
+      "y": 532.73
+    },
+    {
+      "id": 23,
+      "x": 292.41,
+      "y": 496.35
+    },
+    {
+      "id": 24,
+      "x": 321.75,
+      "y": 577.56
+    },
+    {
+      "id": 25,
+      "x": 421.7,
+      "y": 539.18
+    },
+    {
+      "id": 26,
+      "x": 431.41,
+      "y": 498.47
+    },
+    {
+      "id": 27,
+      "x": 429.97,
+      "y": 235.88
+    },
+    {
+      "id": 28,
+      "x": 384.13,
+      "y": 611.11
+    },
+    {
+      "id": 29,
+      "x": 449.47,
+      "y": 441.6
+    }
+  ],
+  "analysis": "Steiner",
+  "results": [
+    {
+      "nr": 1,
+      "param": "SNA",
+      "info": "Angle Sella:Nasion:A. Évalue la position antéro-postérieure du maxillaire par rapport à la base du crâne.",
+      "val": 76.9,
+      "norm": 82,
+      "sd": 2,
+      "unit": "°",
+      "diff": -5.1,
+      "valStr": "76.9°",
+      "normStr": "82±2°",
+      "diffStr": "-5.10°",
+      "cls": "lo",
+      "eval": "Rétrognathie maxillaire",
+      "graphPct": -63.79809721687977
+    },
+    {
+      "nr": 2,
+      "param": "SNB",
+      "info": "Angle Sella:Nasion:B. Évalue la position antéro-postérieure de la mandibule par rapport à la base du crâne.",
+      "val": 70.15,
+      "norm": 80,
+      "sd": 2,
+      "unit": "°",
+      "diff": -9.85,
+      "valStr": "70.2°",
+      "normStr": "80±2°",
+      "diffStr": "-9.85°",
+      "cls": "lo",
+      "eval": "Rétrognathie mandibulaire",
+      "graphPct": -100
+    },
+    {
+      "nr": 3,
+      "param": "ANB",
+      "info": "Différence entre SNA et SNB. Évalue la relation sagittale entre le maxillaire et la mandibule.",
+      "val": 6.74,
+      "norm": 2,
+      "sd": 2,
+      "unit": "°",
+      "diff": 4.74,
+      "valStr": "6.7°",
+      "normStr": "2±2°",
+      "diffStr": "+4.74°",
+      "cls": "hi",
+      "eval": "Classe II squelettique",
+      "graphPct": 59.28624288562894
+    },
+    {
+      "nr": 4,
+      "param": "OP-SNP",
+      "info": "Angle entre le plan occlusal et le plan SN. Évalue l'inclinaison du plan d'occlusion.",
+      "val": 53.72,
+      "norm": 14,
+      "sd": 2,
+      "unit": "°",
+      "diff": 39.72,
+      "valStr": "53.7°",
+      "normStr": "14±2°",
+      "diffStr": "+39.72°",
+      "cls": "hi",
+      "eval": "Indique un visage long, une croissance verticale ou un cas d'occlusion squelettique ouverte",
+      "graphPct": 100
+    },
+    {
+      "nr": 5,
+      "param": "MP(GoGn)-SNP",
+      "info": "Angle antérieur entre le plan mandibulaire (GoGn) et le plan SN. Exprime l'inclinaison de la mandibule par rapport à la base antérieure du crâne.",
+      "val": 41.98,
+      "norm": 32,
+      "sd": 3,
+      "unit": "°",
+      "diff": 9.98,
+      "valStr": "42.0°",
+      "normStr": "32±3°",
+      "diffStr": "+9.98°",
+      "cls": "hi",
+      "eval": "Indique l'inclinaison postérieure de la mandibule ou le schéma squelettique de l'occlusion ouverte",
+      "graphPct": 83.13597874599067
+    },
+    {
+      "nr": 6,
+      "param": "+1-NA",
+      "info": "Angle de l'incisive supérieure par rapport à la ligne NA.",
+      "val": 50.26,
+      "norm": 22,
+      "sd": 2,
+      "unit": "°",
+      "diff": 28.26,
+      "valStr": "50.3°",
+      "normStr": "22±2°",
+      "diffStr": "+28.26°",
+      "cls": "hi",
+      "eval": "Incisive supérieure proclinée",
+      "graphPct": 100
+    },
+    {
+      "nr": 7,
+      "param": "+1:NA",
+      "info": "Distance de l'incisive supérieure à la ligne NA.",
+      "val": -50.63,
+      "norm": 4,
+      "sd": 2,
+      "unit": "mm",
+      "diff": -54.63,
+      "valStr": "-50.63mm",
+      "normStr": "4±2mm",
+      "diffStr": "-54.63mm",
+      "cls": "lo",
+      "eval": "Incisives supérieures rétrusives",
+      "graphPct": -100
+    },
+    {
+      "nr": 8,
+      "param": "-1-NB",
+      "info": "Angle de l'incisive inférieure par rapport à la ligne NB.",
+      "val": 46.3,
+      "norm": 25,
+      "sd": 2,
+      "unit": "°",
+      "diff": 21.3,
+      "valStr": "46.3°",
+      "normStr": "25±2°",
+      "diffStr": "+21.30°",
+      "cls": "hi",
+      "eval": "Incisive inférieure proclinée",
+      "graphPct": 100
+    },
+    {
+      "nr": 9,
+      "param": "-1:NB",
+      "info": "Distance de l'incisive inférieure à la ligne NB.",
+      "val": -9.59,
+      "norm": 4,
+      "sd": 5,
+      "unit": "mm",
+      "diff": -13.59,
+      "valStr": "-9.59mm",
+      "normStr": "4±5mm",
+      "diffStr": "-13.59mm",
+      "cls": "lo",
+      "eval": "Incisives inférieures rétrusives",
+      "graphPct": -67.92560218867186
+    },
+    {
+      "nr": 10,
+      "param": "-1 to +1",
+      "info": "Angle entre l'axe des incisives supérieure et inférieure.",
+      "val": 2.78,
+      "norm": 131,
+      "sd": 8,
+      "unit": "°",
+      "diff": -128.22,
+      "valStr": "2.8°",
+      "normStr": "131±8°",
+      "diffStr": "-128.22°",
+      "cls": "lo",
+      "eval": "Angle incisif fermé",
+      "graphPct": -100
+    },
+    {
+      "nr": 11,
+      "param": "Rapport de Holdaway",
+      "info": "Distance du pogonion à la ligne NB. Évalue l'épaisseur de la symphyse.",
+      "val": 4.39,
+      "norm": 0,
+      "sd": 2,
+      "unit": "mm",
+      "diff": 4.39,
+      "valStr": "4.39mm",
+      "normStr": "0±2mm",
+      "diffStr": "+4.39mm",
+      "cls": "hi",
+      "eval": "Symphyse épaisse",
+      "graphPct": 54.866832255105315
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html data-theme="">
+<head>
+<meta charset="utf-8">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>
+:root{--bg-body:#0e1117;--bg-tb:#161b2e;--bg-tg:#1e2440;--bg-side:#161b2e;--bg-sec-hd:#7eb3ff;--bd-color:#2a2f4a;--bd-sec:#2a2f4a;--txt-body:#e0e0e0;--txt-muted:#8899bb;--txt-on:#fff;--txt-off:#8899bb;--txt-vd:#7eb3ff;--btn-off-bg:#2a2f4a;--btn-off-c:#8899bb;--btn-g-bg:#2d6a4f;--btn-g-c:#a0e0b0;--btn-r-bg:#6a2d2d;--btn-r-c:#e0a0a0;--btn-o-bg:#6a4e2d;--btn-o-c:#e0c0a0;--tip-bg:rgba(10,12,28,.93);--atbl-th-bg:#1e2440;--atbl-th-c:#8899bb;--atbl-td-bd:#1a1f38;--atbl-ok-c:#a0d0a0;--atbl-hi-c:#ff8888;--atbl-lo-c:#ffaa66;--atbl-na-c:#555;--sb-bg:#161b2e;--sb-bd:#2a2f4a;--st-c:#7eb3ff;--side-ln:#2a2f4a;--grf-trk:#1a1f38;--grf-zn:rgba(80,200,80,0.12);--grf-ln:#66cc66;--grf-hi:#ff7777;--grf-lo:#77aaff;}
+[data-theme="light"]{--bg-body:#f0f2f5;--bg-tb:#ffffff;--bg-tg:#e8ecf4;--bg-side:#ffffff;--bg-sec-hd:#1a3a6a;--bd-color:#d0d4e0;--bd-sec:#d0d4e0;--txt-body:#1a1f36;--txt-muted:#5a627a;--txt-on:#fff;--txt-off:#5a627a;--txt-vd:#1a3a6a;--btn-off-bg:#dce0ec;--btn-off-c:#5a627a;--btn-g-bg:#e8f5e9;--btn-g-c:#2e7d32;--btn-r-bg:#fbe9e7;--btn-r-c:#c62828;--btn-o-bg:#fff8e1;--btn-o-c:#f57f17;--tip-bg:rgba(240,242,245,.95);--atbl-th-bg:#e8ecf4;--atbl-th-c:#5a627a;--atbl-td-bd:#e0e4ec;--atbl-ok-c:#2e7d32;--atbl-hi-c:#c62828;--atbl-lo-c:#e65100;--atbl-na-c:#9ca3b8;--sb-bg:#ffffff;--sb-bd:#d0d4e0;--st-c:#1a3a6a;--side-ln:#d0d4e0;--grf-trk:#dce0ec;--grf-zn:rgba(40,160,40,0.12);--grf-ln:#44aa44;--grf-hi:#cc3333;--grf-lo:#3366cc;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg-body);font-family:'Segoe UI',sans-serif;color:var(--txt-body);display:flex;flex-direction:column;height:100vh;overflow:hidden;}
+#tb{display:flex;flex-wrap:wrap;gap:5px;align-items:center;padding:5px 8px;background:var(--bg-tb);border-bottom:1px solid var(--bd-color);flex-shrink:0;}
+.tg{display:flex;align-items:center;gap:4px;background:var(--bg-tg);border-radius:5px;padding:3px 7px;}
+.tg label{font-size:11px;color:var(--txt-muted);white-space:nowrap;}
+.btn{padding:3px 8px;border-radius:4px;border:none;cursor:pointer;font-size:11px;font-weight:700;transition:all .15s;}
+.btn.on{background:#4f8ef7;color:var(--txt-on);}.btn.off{background:var(--btn-off-bg);color:var(--btn-off-c);}
+.btn.g{background:var(--btn-g-bg);color:var(--btn-g-c);}.btn.g:hover{filter:brightness(1.1);}
+.btn.r{background:var(--btn-r-bg);color:var(--btn-r-c);}.btn.r:hover{filter:brightness(1.1);}
+.btn.o{background:var(--btn-o-bg);color:var(--btn-o-c);}.btn.o:hover{filter:brightness(1.1);}
+input[type=range]{width:70px;accent-color:#4f8ef7;cursor:pointer;}
+input[type=checkbox]{accent-color:#4f8ef7;width:13px;height:13px;cursor:pointer;}
+.vd{font-size:11px;color:var(--txt-vd);min-width:22px;text-align:center;}
+#main{display:flex;flex:1;overflow:hidden;}
+#cv{position:relative;flex:1;overflow:hidden;background:#000;cursor:crosshair;}
+canvas{display:block;position:absolute;top:0;left:0;}
+#tip{position:absolute;pointer-events:none;display:none;background:var(--tip-bg);border:1px solid #4f8ef7;border-radius:5px;padding:4px 9px;font-size:11px;color:var(--txt-body);white-space:nowrap;z-index:10;}
+#side{width:40%;min-width:320px;max-width:70%;background:var(--bg-side);border-left:1px solid var(--side-ln);overflow:auto;flex-shrink:0;display:flex;flex-direction:column;resize:horizontal;}
+.sec{border-bottom:1px solid var(--bd-sec);padding:7px 8px;}
+.sec h4{font-size:11px;font-weight:700;color:var(--bg-sec-hd);margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em;display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none;}
+.sec h4 .sa{display:flex;gap:3px;}
+.sec h4 .sa button{font-size:9px;padding:1px 5px;border:none;border-radius:3px;cursor:pointer;background:var(--btn-off-bg);color:var(--btn-off-c);}
+.sec h4 .toggle-icon{font-size:9px;color:#556;margin-right:4px;transition:transform .15s;}
+.sec.collapsed h4 .toggle-icon{transform:rotate(-90deg);}
+.sec-body{overflow:visible;}
+.sec.collapsed .sec-body{display:none;}
+#anal-sel{max-height:220px;overflow-y:auto;}
+.atbl{width:100%;border-collapse:collapse;font-size:10px;table-layout:fixed;}
+.atbl th{background:var(--atbl-th-bg);color:var(--atbl-th-c);padding:4px 3px;text-align:center;font-weight:600;white-space:nowrap;}
+.atbl th:first-child{width:30%;}
+.atbl th:nth-child(2){width:8%;}
+.atbl th:nth-child(3){width:8%;}
+.atbl th:nth-child(4){width:8%;}
+.atbl th:nth-child(5){width:11%;}
+.atbl th:last-child{width:35%;}
+.atbl td{padding:3px 3px;border-bottom:1px solid var(--atbl-td-bd);text-align:center;vertical-align:middle;}
+.atbl td:first-child{text-align:left;}
+.atbl td:nth-child(2),
+.atbl td:nth-child(3){}
+.atbl td:nth-child(4){font-weight:700;}
+.atbl td:nth-child(5){}
+.atbl td:last-child{text-align:left;font-size:10px;white-space:normal;word-break:break-word;}
+.atbl tr.ok td{color:var(--atbl-ok-c);}.atbl tr.hi td{color:var(--atbl-hi-c);}.atbl tr.lo td{color:var(--atbl-lo-c);}.atbl tr.na td{color:var(--atbl-na-c);}
+#sb{display:flex;gap:6px;align-items:center;padding:5px 8px;background:var(--sb-bg);border-top:1px solid var(--sb-bd);flex-shrink:0;flex-wrap:wrap;}
+.sbtn{padding:3px 10px;border-radius:4px;border:none;cursor:pointer;font-size:11px;font-weight:700;}
+#st{font-size:11px;color:var(--st-c);margin-left:auto;}
+</style>
+</head>
+<body>
+<div id="tb">
+  <div class="tg"><label>Mode</label>
+    <button class="btn on"  id="bm-sel" onclick="setMode('sel')">✥ Sélect.</button>
+    <button class="btn off" id="bm-trc" onclick="setMode('trc')">✏ Tracé</button>
+    <button class="btn off" id="bm-pln" onclick="setMode('pln')">⟵ Plan</button>
+    <button class="btn off" id="bm-era" onclick="setMode('era')">✕ Eff.</button>
+  </div>
+  <div class="tg"><label>Labels</label>
+    <button class="btn on"  id="bl-abr" onclick="setLblMode('abbrev')">Abrév.</button>
+    <button class="btn off" id="bl-num" onclick="setLblMode('number')">N°</button>
+    <input type="checkbox" id="chk-lbl" checked onchange="R()">
+    <label style="font-size:10px;color:#8899bb">Afficher</label>
+  </div>
+  <div class="tg"><label>Police</label>
+    <input type="range" id="rng-fs" min="8" max="36" value="12" oninput="document.getElementById('vfs').textContent=this.value;R()">
+    <span class="vd" id="vfs">12</span>
+  </div>
+  <div class="tg"><label>Rayon</label>
+    <input type="range" id="rng-r" min="2" max="18" value="5" oninput="document.getElementById('vr').textContent=this.value;R()">
+    <span class="vd" id="vr">5</span>
+  </div>
+  <div class="tg"><label>Luminosité</label>
+    <input type="range" id="rng-br" min="20" max="300" value="100" oninput="document.getElementById('vbr').textContent=this.value+'%';R()">
+    <span class="vd" id="vbr">100%</span>
+  </div>
+  <div class="tg"><label>Contraste</label>
+    <input type="range" id="rng-ct" min="20" max="400" value="100" oninput="document.getElementById('vct').textContent=this.value+'%';R()">
+    <span class="vd" id="vct">100%</span>
+  </div>
+  <div class="tg">
+    <button class="btn off" onclick="fitView()">⤢ Fit</button>
+    <button class="btn off" onclick="zoom(1.2)">＋</button>
+    <button class="btn off" onclick="zoom(0.8)">－</button>
+  </div>
+  <div class="tg">
+    <button class="btn o" onclick="startCalib()">📏 Calibrer</button>
+    <span style="font-size:10px;color:var(--btn-o-c)">px/mm: <span id="pxmm">auto</span></span>
+  </div>
+  <button class="sbtn btn g" onclick="autoDetect()" id="btn-detect">🧠 Détection auto</button>
+  <button class="sbtn btn off" onclick="toggleCanvasTheme()" style="margin-left:auto">☀️ Thème</button>
+</div>
+<div id="main">
+  <div id="cv"><canvas id="mc"></canvas><div id="tip"></div></div>
+  <div id="side">
+    <div class="sec">
+      <h4 onclick="toggleSec(this)"><span class="toggle-icon">▼</span>📊 Analyse<span class="sa"></span></h4>
+      <div class="sec-body">
+        <select id="anal-sel" onchange="setAnalysis(this.value)" style="width:100%;background:#1e2440;color:#c0cce0;border:1px solid #2a2f4a;border-radius:4px;padding:4px;font-size:12px;margin-bottom:8px"></select>
+        <div style="font-size:9px;color:#556;margin-bottom:4px">
+          <span style="color:#a0d0a0">●</span> normal &nbsp;
+          <span style="color:#ff8888">●</span> élevé &nbsp;
+          <span style="color:#ffaa66">●</span> bas
+        </div>
+        <table class="atbl">
+          <thead><tr><th>Paramètre</th><th>Norme</th><th>±σ</th><th>Valeur</th><th>Graphique</th><th>Évaluation</th></tr></thead>
+          <tbody id="atbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="sec">
+      <h4 onclick="toggleSec(this)"><span class="toggle-icon">▼</span>📐 Plans actifs<span class="sa"><button onclick="event.stopPropagation();toggleAllPlanes(true)">Tout</button><button onclick="event.stopPropagation();toggleAllPlanes(false)">Aucun</button></span></h4>
+      <div class="sec-body"><div id="pln-panel"></div></div>
+    </div>
+    <div class="sec">
+      <h4 onclick="toggleSec(this)"><span class="toggle-icon">▼</span>🦴 Tracés anatomiques<span class="sa"><button onclick="event.stopPropagation();toggleAllTracings(true)">Tout</button><button onclick="event.stopPropagation();toggleAllTracings(false)">Aucun</button></span></h4>
+      <div class="sec-body"><div id="trc-panel"></div></div>
+    </div>
+    <div class="sec" style="flex:1">
+      <h4 onclick="toggleSec(this)"><span class="toggle-icon">▼</span>📋 Résultats</h4>
+      <div class="sec-body"><p style="font-size:11px;color:#556">Sélectionnez une analyse ci-dessus.</p></div>
+    </div>
+  </div>
+</div>
+<div id="sb">
+  <a href="/dashboard" class="sbtn btn off" style="text-decoration:none">🏠 Accueil</a>
+  <button class="sbtn btn g" onclick="dlPNG()">⬇ PNG</button>
+  <button class="sbtn btn off" onclick="dlJSON()">⬇ JSON</button>
+  <button class="sbtn btn off" onclick="dlPDF()">⬇ PDF</button>
+  <button class="sbtn btn r" onclick="resetPts()">↺ Reset</button>
+  <span id="st">Prêt</span>
+</div>
+<script>
+(function(){const s=localStorage.getItem('ceph-theme');if(s==='light')document.documentElement.setAttribute('data-theme','light');})();
+function toggleCanvasTheme(){const h=document.documentElement;const c=h.getAttribute('data-theme');const n=c==='light'?'':'light';if(n)h.setAttribute('data-theme',n);else h.removeAttribute('data-theme');localStorage.setItem('ceph-theme',n||'dark');}
+</script>
+<script>
+{{ injected_data }}
+</script>
+<script src="/static/js/canvas_engine.js?v=2"></script>
+</body>
+</html>

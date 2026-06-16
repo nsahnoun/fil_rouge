@@ -1,0 +1,16 @@
+<aside class="sidebar">
+    <div class="sidebar-section">
+        <h4>Navigation</h4>
+        <a href="/dashboard" class="sidebar-link">Dashboard</a>
+        <a href="/patients" class="sidebar-link">Patients</a>
+        <a href="/analyses" class="sidebar-link">Analyses</a>
+        <a href="/reports" class="sidebar-link">Rapports</a>
+    </div>
+    {% if current_user and current_user.role.name == 'admin' %}
+    <div class="sidebar-section">
+        <h4>Gestion</h4>
+        <a href="/admin/users" class="sidebar-link">👥 Utilisateurs</a>
+        <a href="/admin/settings" class="sidebar-link">⚙️ Configuration</a>
+    </div>
+    {% endif %}
+</aside>

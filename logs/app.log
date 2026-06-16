@@ -1,0 +1,89 @@
+[2026-05-12 16:57:36,851] WARNING passlib.handlers.bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/tmp/ceph_venv/lib/python3.14/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2026-05-12 18:55:37,173] ERROR web_gateway.services.ceph_client: Erreur appel ceph_api /predict: All connection attempts failed
+[2026-05-12 19:12:11,517] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-12 19:12:17,004] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-12 19:12:41,102] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-12 19:13:02,207] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-12 19:16:36,164] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-12 19:16:53,149] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-12 19:16:54,357] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-12 19:16:54,789] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-12 19:24:04,825] ERROR web_gateway.services.ceph_client: Erreur appel ceph_api /predict: All connection attempts failed
+[2026-05-12 19:25:47,411] ERROR web_gateway.services.ceph_client: Erreur appel ceph_api /predict: All connection attempts failed
+[2026-05-12 19:25:48,747] ERROR web_gateway.services.ceph_client: Erreur appel ceph_api /predict: All connection attempts failed
+[2026-05-12 19:25:51,196] ERROR web_gateway.services.ceph_client: Erreur appel ceph_api /predict: All connection attempts failed
+[2026-05-12 19:25:56,713] ERROR web_gateway.services.ceph_client: Erreur appel ceph_api /predict: All connection attempts failed
+[2026-05-12 19:26:28,681] ERROR web_gateway.services.ceph_client: Erreur appel ceph_api /predict: All connection attempts failed
+[2026-05-12 19:30:07,240] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-12 19:31:07,562] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-12 20:15:18,514] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-12 20:43:04,699] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-12 21:13:01,184] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-12 23:05:06,486] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-12 23:37:38,773] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-12 23:55:26,178] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 00:27:51,922] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 00:28:38,546] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 00:32:08,474] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 00:36:40,571] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 00:43:42,716] ERROR web_gateway.services.ceph_client: Erreur appel ceph_api /predict: All connection attempts failed
+[2026-05-13 00:43:49,860] ERROR web_gateway.services.ceph_client: Erreur appel ceph_api /predict: All connection attempts failed
+[2026-05-13 00:43:51,377] ERROR web_gateway.services.ceph_client: Erreur appel ceph_api /predict: All connection attempts failed
+[2026-05-13 00:43:51,958] ERROR web_gateway.services.ceph_client: Erreur appel ceph_api /predict: All connection attempts failed
+[2026-05-13 00:43:52,274] ERROR web_gateway.services.ceph_client: Erreur appel ceph_api /predict: All connection attempts failed
+[2026-05-13 00:49:04,546] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 01:02:45,238] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 01:03:28,833] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 01:05:09,247] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 01:06:01,299] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 01:07:17,008] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 01:10:15,545] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 01:15:25,769] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 01:20:02,077] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 01:23:04,775] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 01:26:43,697] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 01:29:01,412] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 01:33:19,355] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 01:42:14,595] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 500 Internal Server Error"
+[2026-05-13 01:42:14,596] ERROR web_gateway.services.ceph_client: Erreur appel ceph_api /predict: Server error '500 Internal Server Error' for url 'http://localhost:8000/predict'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+[2026-05-13 01:44:17,876] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 500 Internal Server Error"
+[2026-05-13 01:44:17,876] ERROR web_gateway.services.ceph_client: Erreur appel ceph_api /predict: Server error '500 Internal Server Error' for url 'http://localhost:8000/predict'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+[2026-05-13 01:46:09,276] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 01:50:14,250] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 01:52:24,670] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 01:58:22,804] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 01:58:55,236] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 02:00:37,172] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 02:43:11,338] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 02:48:33,722] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 14:05:25,861] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 14:44:40,435] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 14:49:12,112] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 15:00:49,032] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 15:49:24,570] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 16:01:01,591] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 16:02:05,672] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 16:08:15,383] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 16:15:19,268] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 16:19:53,056] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 21:26:17,623] ERROR web_gateway.services.ceph_client: Erreur appel ceph_api /predict: All connection attempts failed
+[2026-05-13 21:27:40,396] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 21:57:47,786] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 23:55:13,631] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-13 23:55:55,540] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-14 07:39:18,043] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-18 16:47:32,001] ERROR web_gateway.services.ceph_client: Erreur appel ceph_api /predict: All connection attempts failed
+[2026-05-18 16:48:52,353] ERROR web_gateway.services.ceph_client: Erreur appel ceph_api /predict: All connection attempts failed
+[2026-05-18 16:51:17,141] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-19 19:29:09,527] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-19 19:44:59,667] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-19 20:36:46,977] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-22 18:15:36,074] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"
+[2026-05-22 23:40:05,794] INFO httpx: HTTP Request: POST http://localhost:8000/predict "HTTP/1.1 200 OK"

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CephAnalysis — Connexion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="login-page">
+        <div class="login-card">
+            <h1>CephAnalysis</h1>
+            <p class="subtitle">Plateforme d'analyse céphalométrique</p>
+            <form id="login-form">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Mot de passe</label>
+                    <input type="password" name="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Se connecter</button>
+                <div id="login-error" class="form-error" style="display:none"></div>
+            </form>
+            <div class="login-footer">
+                <a href="/auth/register">Créer un compte</a>
+            </div>
+        </div>
+    </div>
+    <script>
+    document.getElementById('login-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const data = { email: form.email.value, password: form.password.value };
+        const resp = await fetch('/api/auth/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+        });
+        if (resp.ok) { window.location.href = '/dashboard'; }
+        else {
+            const err = await resp.json();
+            const el = document.getElementById('login-error');
+            el.textContent = err.detail || 'Erreur de connexion';
+            el.style.display = 'block';
+        }
+    });
+    </script>
+</body>
+</html>

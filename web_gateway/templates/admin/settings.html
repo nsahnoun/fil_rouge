@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block title %}Configuration{% endblock %}
+{% block content %}
+<div class="page-header">
+    <h1>Configuration du cabinet</h1>
+</div>
+<div class="card" style="max-width:600px">
+    <div class="form-group">
+        <label>Nom du cabinet</label>
+        <input type="text" id="clinic_name" class="form-control" value="{{ settings.clinic_name }}">
+    </div>
+    <div class="form-group">
+        <label>Ville</label>
+        <input type="text" id="clinic_city" class="form-control" value="{{ settings.clinic_city }}">
+    </div>
+    <div class="form-group">
+        <label>Adresse</label>
+        <input type="text" id="clinic_address" class="form-control" value="{{ settings.clinic_address or '' }}">
+    </div>
+    <div class="form-group">
+        <label>URL du serveur ceph_api</label>
+        <input type="text" id="ceph_api_url" class="form-control" value="{{ settings.ceph_api_url }}">
+        <div style="font-size:11px;color:var(--text-muted);margin-top:4px">Adresse du service de détection automatique des landmarks</div>
+    </div>
+    <div style="display:flex;gap:8px;margin-top:16px">
+        <button class="btn btn-primary" onclick="saveSettings()">Enregistrer</button>
+    </div>
+    <div id="save-msg" style="margin-top:8px;font-size:13px;display:none"></div>
+</div>
+
+<div class="card" style="max-width:600px;margin-top:20px">
+    <div class="card-header">
+        <h2>Journaux d'audit</h2>
+    </div>
+    <div style="padding:16px">
+        <p style="font-size:13px;color:var(--text-muted);margin-bottom:12px">Supprimer tous les journaux d'audit. Cette action est irréversible.</p>
+        <button class="btn btn-danger" onclick="purgeLogs()">🗑️ Purger les logs</button>
+        <div id="purge-msg" style="margin-top:8px;font-size:13px;display:none"></div>
+    </div>
+</div>
+{% endblock %}
+{% block extra_js %}
+<script>
+async function saveSettings() {
+    const fields = ['clinic_name', 'clinic_city', 'clinic_address', 'ceph_api_url'];
+    for (const key of fields) {
+        const val = document.getElementById(key).value;
+        const resp = await fetch('/api/admin/settings', {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ key, value: val }),
+        });
+        if (!resp.ok) {
+            const err = await resp.json();
+            showMsg('Erreur: ' + (err.detail || 'inconnue'), 'danger');
+            return;
+        }
+    }
+    showMsg('Configuration enregistrée', 'success');
+}
+function showMsg(text, type) {
+    const el = document.getElementById('save-msg');
+    el.textContent = text;
+    el.style.display = 'block';
+    el.style.color = type === 'danger' ? 'var(--danger-text)' : 'var(--success-text)';
+    setTimeout(() => { el.style.display = 'none'; }, 3000);
+}
+async function purgeLogs() {
+    if (!confirm('Supprimer définitivement tous les logs d\'audit ?')) return;
+    const resp = await fetch('/api/admin/audit/purge', { method: 'DELETE' });
+    const el = document.getElementById('purge-msg');
+    if (resp.ok) {
+        el.textContent = '✅ Logs purgés avec succès';
+        el.style.color = 'var(--success-text)';
+    } else {
+        el.textContent = '❌ Erreur lors de la purge';
+        el.style.color = 'var(--danger-text)';
+    }
+    el.style.display = 'block';
+    setTimeout(() => { el.style.display = 'none'; }, 3000);
+}
+</script>
+{% endblock %}

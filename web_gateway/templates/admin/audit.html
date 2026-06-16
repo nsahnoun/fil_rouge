@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Audit{% endblock %}
+{% block content %}
+<div class="page-header">
+    <h1>Logs d'audit</h1>
+</div>
+<div class="card">
+    <div class="table-wrapper">
+        <table class="table">
+            <thead>
+                <tr><th>ID</th><th>Utilisateur</th><th>Action</th><th>Ressource</th><th>ID</th><th>Date</th></tr>
+            </thead>
+            <tbody id="audit-body"></tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+{% block extra_js %}
+<script>
+fetch('/api/admin/audit').then(r => r.json()).then(logs => {
+    const tbody = document.getElementById('audit-body');
+    if (logs.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="6" class="text-center text-muted" style="padding:24px">Aucun log</td></tr>';
+        return;
+    }
+    logs.forEach(l => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${l.id}</td><td>${l.user_id || '—'}</td><td>${l.action}</td><td>${l.resource_type}</td><td>${l.resource_id || '—'}</td><td>${new Date(l.created_at).toLocaleString('fr-FR')}</td>`;
+        tbody.append(tr);
+    });
+});
+</script>
+{% endblock %}

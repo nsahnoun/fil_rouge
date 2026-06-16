@@ -1,0 +1,123 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+ <style>text { font-family: sans-serif; }
+    .title { font-size: 22px; font-weight: bold; fill: #1a1a2e; }
+    .subtitle { font-size: 14px; fill: #666; }
+    .label { font-size: 12px; fill: #555; }
+    .val { font-size: 14px; fill: #222; }
+    .border { fill: none; stroke: #ddd; stroke-width: 1.5; }
+    .border-dark { fill: none; stroke: #999; stroke-width: 1.5; }
+    .fill-light { fill: #f5f5f8; }
+    .fill-white { fill: #fff; }
+    .fill-blue { fill: #e8f0fe; }
+    .fill-green { fill: #e6f4ea; }
+    .fill-yellow { fill: #fef7e0; }
+    .fill-red { fill: #fce8e6; }
+    .accent { fill: #1a73e8; }
+    .accent-text { fill: #fff; font-size: 13px; font-weight: bold; }
+    .icon-box { fill: none; stroke: #bbb; stroke-width: 1.5; rx: 4; }
+    .line { fill: none; stroke: #e0e0e0; stroke-width: 1; }
+    .line-dark { fill: none; stroke: #ccc; stroke-width: 1; }</style>
+
+ <!-- Sidebar -->
+ <!-- Nav items -->
+ <!-- Header -->
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="602" width="802" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_1" class="fill-light border" height="800" width="220" y="0" x="0"/>
+  <rect id="svg_2" fill="#1a1a2e" height="60" width="220" y="0" x="0"/>
+  <text id="svg_3" fill="#fff" font-weight="bold" font-size="18" y="38" x="30">OrthoAnalyse</text>
+  <rect id="svg_4" rx="6" fill="transparent" height="40" width="200" y="80" x="10"/>
+  <text id="svg_5" font-weight="normal" font-size="14" fill="#444" y="105" x="30">Dashboard</text>
+  <rect id="svg_6" rx="6" fill="transparent" height="40" width="200" y="130" x="10"/>
+  <text id="svg_7" font-weight="normal" font-size="14" fill="#444" y="155" x="30">Patients</text>
+  <rect id="svg_8" rx="6" fill="#e8f0fe" height="40" width="200" y="180" x="10"/>
+  <text id="svg_9" font-weight="bold" font-size="14" fill="#1a73e8" y="205" x="30">Analyses</text>
+  <rect id="svg_10" rx="6" fill="transparent" height="40" width="200" y="230" x="10"/>
+  <text id="svg_11" font-weight="normal" font-size="14" fill="#444" y="255" x="30">Rapports</text>
+  <rect id="svg_12" rx="6" fill="transparent" height="40" width="200" y="280" x="10"/>
+  <text id="svg_13" font-weight="normal" font-size="14" fill="#444" y="305" x="30">Admin</text>
+  <rect id="svg_14" rx="6" fill="transparent" height="40" width="200" y="330" x="10"/>
+  <text id="svg_15" font-weight="normal" font-size="14" fill="#444" y="355" x="30">Paramètres</text>
+  <rect id="svg_16" class="fill-white border" height="60" width="980" y="0" x="220"/>
+  <text id="svg_17" class="title" y="35" x="250">Résultats d'analyse</text>
+  <text id="svg_18" class="val" text-anchor="end" y="33" x="1077">Dr. Dupont</text>
+  <rect id="svg_19" rx="12" class="icon-box" height="24" width="40" y="18" x="1130"/>
+  <text id="svg_20" font-size="11" class="label" text-anchor="middle" y="35" x="1150">EN</text>
+  <rect id="svg_21" ry="8" rx="8" class="fill-white border" height="80" width="700" y="85" x="250"/>
+  <text id="svg_22" class="title" y="110" x="280">Analyse T3 — Sophie Martin</text>
+  <text id="svg_23" class="subtitle" y="130" x="280">Réalisée le 12/05/2026 par Dr. Dupont • Validée par Dr. Martin</text>
+  <rect stroke="null" id="svg_24" ry="8" rx="8" class="fill-white border" height="383.999985" width="450" y="185" x="250"/>
+  <text id="svg_25" class="title" y="215" x="280">Mesures céphalométriques</text>
+  <rect id="svg_26" ry="4" rx="4" class="fill-light" height="28" width="410" y="230" x="270"/>
+  <text id="svg_27" class="label" y="249" x="285">Mesure</text>
+  <text id="svg_28" class="label" y="249" x="410">Valeur</text>
+  <text id="svg_29" class="label" y="249" x="510">Norme</text>
+  <text id="svg_30" class="label" y="249" x="610">Statut</text>
+  <line id="svg_31" class="line" y2="268" x2="680" y1="268" x1="270"/>
+  <text id="svg_32" class="val" y="286" x="285">SNA (°)</text>
+  <text id="svg_33" class="val" y="286" x="410">82</text>
+  <text id="svg_34" class="subtitle" y="286" x="510">82 ± 2</text>
+  <text id="svg_35" class="val" y="286" x="610">✓</text>
+  <line id="svg_36" class="line" y2="296" x2="680" y1="296" x1="270"/>
+  <text id="svg_37" class="val" y="314" x="285">SNB (°)</text>
+  <text id="svg_38" class="val" y="314" x="410">78</text>
+  <text id="svg_39" class="subtitle" y="314" x="510">80 ± 2</text>
+  <text id="svg_40" class="val" y="314" x="610">⚠</text>
+  <line id="svg_41" class="line" y2="324" x2="680" y1="324" x1="270"/>
+  <text id="svg_42" class="val" y="342" x="285">ANB (°)</text>
+  <text id="svg_43" class="val" y="342" x="410">4</text>
+  <text id="svg_44" class="subtitle" y="342" x="510">2 ± 2</text>
+  <text id="svg_45" class="val" y="342" x="610">⚠</text>
+  <line id="svg_46" class="line" y2="352" x2="680" y1="352" x1="270"/>
+  <text id="svg_47" class="val" y="370" x="285">FMA (°)</text>
+  <text id="svg_48" class="val" y="370" x="410">25</text>
+  <text id="svg_49" class="subtitle" y="370" x="510">25 ± 3</text>
+  <text id="svg_50" class="val" y="370" x="610">✓</text>
+  <line id="svg_51" class="line" y2="380" x2="680" y1="380" x1="270"/>
+  <text id="svg_52" class="val" y="398" x="285">IMPA (°)</text>
+  <text id="svg_53" class="val" y="398" x="410">90</text>
+  <text id="svg_54" class="subtitle" y="398" x="510">90 ± 5</text>
+  <text id="svg_55" class="val" y="398" x="610">✓</text>
+  <line id="svg_56" class="line" y2="408" x2="680" y1="408" x1="270"/>
+  <text id="svg_57" class="val" y="426" x="285">1-NA (°)</text>
+  <text id="svg_58" class="val" y="426" x="410">22</text>
+  <text id="svg_59" class="subtitle" y="426" x="510">22 ± 2</text>
+  <text id="svg_60" class="val" y="426" x="610">✓</text>
+  <line id="svg_61" class="line" y2="436" x2="680" y1="436" x1="270"/>
+  <text id="svg_62" class="val" y="454" x="285">1-NA (mm)</text>
+  <text id="svg_63" class="val" y="454" x="410">4</text>
+  <text id="svg_64" class="subtitle" y="454" x="510">4 ± 2</text>
+  <text id="svg_65" class="val" y="454" x="610">✓</text>
+  <line id="svg_66" class="line" y2="464" x2="680" y1="464" x1="270"/>
+  <text id="svg_67" class="val" y="482" x="285">Co-A (mm)</text>
+  <text id="svg_68" class="val" y="482" x="410">85</text>
+  <text id="svg_69" class="subtitle" y="482" x="510">85-95</text>
+  <text id="svg_70" class="val" y="482" x="610">⚠</text>
+  <line id="svg_71" class="line" y2="492" x2="680" y1="492" x1="270"/>
+  <text id="svg_72" class="val" y="510" x="285">Go-Me (mm)</text>
+  <text id="svg_73" class="val" y="510" x="410">70</text>
+  <text id="svg_74" class="subtitle" y="510" x="510">70-80</text>
+  <text id="svg_75" class="val" y="510" x="610">✓</text>
+  <line id="svg_76" class="line" y2="520" x2="680" y1="520" x1="270"/>
+  <text id="svg_77" class="val" y="538" x="285">S-Go (mm)</text>
+  <text id="svg_78" class="val" y="538" x="410">75</text>
+  <text id="svg_79" class="subtitle" y="538" x="510">75-85</text>
+  <text id="svg_80" class="val" y="538" x="610">✓</text>
+  <rect id="svg_81" ry="8" rx="8" class="fill-white border" height="150" width="230" y="185" x="720"/>
+  <text id="svg_82" class="title" y="215" x="750">Résumé</text>
+  <text id="svg_83" class="val" y="240" x="750">Classification: Classe II</text>
+  <text id="svg_84" class="val" y="260" x="750">Divergence: Normodivergent</text>
+  <text id="svg_85" class="val" y="280" x="750">Incisives: Normo-inclinées</text>
+  <text id="svg_86" class="val" y="300" x="750">Profil: Convexe</text>
+  <rect stroke="null" id="svg_87" ry="8" rx="8" class="fill-white border" height="150" width="232.999991" y="357" x="717"/>
+  <text id="svg_88" class="title" y="385" x="750">Actions</text>
+  <rect id="svg_89" ry="6" rx="6" class="fill-blue" height="28" width="190" y="400" x="740"/>
+  <text id="svg_90" class="val" y="419" x="769">📄 Générer rapport</text>
+  <rect id="svg_91" ry="6" rx="6" class="fill-blue" height="28" width="190" y="435" x="740"/>
+  <text id="svg_92" class="val" y="453" x="773">📊 Comparer T2/T3</text>
+ </g>
+</svg>

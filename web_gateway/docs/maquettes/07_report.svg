@@ -1,0 +1,84 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+ <style>text { font-family: sans-serif; }
+    .title { font-size: 22px; font-weight: bold; fill: #1a1a2e; }
+    .subtitle { font-size: 14px; fill: #666; }
+    .label { font-size: 12px; fill: #555; }
+    .val { font-size: 14px; fill: #222; }
+    .border { fill: none; stroke: #ddd; stroke-width: 1.5; }
+    .border-dark { fill: none; stroke: #999; stroke-width: 1.5; }
+    .fill-light { fill: #f5f5f8; }
+    .fill-white { fill: #fff; }
+    .fill-blue { fill: #e8f0fe; }
+    .fill-green { fill: #e6f4ea; }
+    .fill-yellow { fill: #fef7e0; }
+    .fill-red { fill: #fce8e6; }
+    .accent { fill: #1a73e8; }
+    .accent-text { fill: #fff; font-size: 13px; font-weight: bold; }
+    .icon-box { fill: none; stroke: #bbb; stroke-width: 1.5; rx: 4; }
+    .line { fill: none; stroke: #e0e0e0; stroke-width: 1; }
+    .line-dark { fill: none; stroke: #ccc; stroke-width: 1; }</style>
+
+ <!-- Sidebar -->
+ <!-- Nav items -->
+ <!-- Header -->
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="602" width="802" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_1" class="fill-light border" height="800" width="220" y="0" x="0"/>
+  <rect id="svg_2" fill="#1a1a2e" height="60" width="220" y="0" x="0"/>
+  <text id="svg_3" fill="#fff" font-weight="bold" font-size="18" y="38" x="30">OrthoAnalyse</text>
+  <rect id="svg_4" rx="6" fill="transparent" height="40" width="200" y="80" x="10"/>
+  <text id="svg_5" font-weight="normal" font-size="14" fill="#444" y="105" x="30">Dashboard</text>
+  <rect id="svg_6" rx="6" fill="transparent" height="40" width="200" y="130" x="10"/>
+  <text id="svg_7" font-weight="normal" font-size="14" fill="#444" y="155" x="30">Patients</text>
+  <rect id="svg_8" rx="6" fill="transparent" height="40" width="200" y="180" x="10"/>
+  <text id="svg_9" font-weight="normal" font-size="14" fill="#444" y="205" x="30">Analyses</text>
+  <rect id="svg_10" rx="6" fill="#e8f0fe" height="40" width="200" y="230" x="10"/>
+  <text id="svg_11" font-weight="bold" font-size="14" fill="#1a73e8" y="255" x="30">Rapports</text>
+  <rect id="svg_12" rx="6" fill="transparent" height="40" width="200" y="280" x="10"/>
+  <text id="svg_13" font-weight="normal" font-size="14" fill="#444" y="305" x="30">Admin</text>
+  <rect id="svg_14" rx="6" fill="transparent" height="40" width="200" y="330" x="10"/>
+  <text id="svg_15" font-weight="normal" font-size="14" fill="#444" y="355" x="30">Paramètres</text>
+  <rect id="svg_16" class="fill-white border" height="60" width="980" y="0" x="220"/>
+  <text id="svg_17" class="title" y="35" x="250">Rapport d'analyse</text>
+  <text id="svg_18" class="val" text-anchor="end" y="35" x="1100">Dr. Dupont</text>
+  <rect id="svg_19" rx="12" class="icon-box" height="24" width="40" y="18" x="1130"/>
+  <text id="svg_20" font-size="11" class="label" text-anchor="middle" y="35" x="1150">EN</text>
+  <rect id="svg_21" ry="4" rx="4" class="fill-white border" height="600" width="700" y="85" x="250"/>
+  <rect stroke="null" id="svg_22" ry="4" rx="4" class="fill-light border" height="120" width="692.999964" y="86" x="253"/>
+  <text id="svg_23" class="title" y="116" x="564">Rapport d'analyse céphalométrique</text>
+  <text id="svg_24" class="subtitle" y="150" x="600">Sophie Martin — 28 ans</text>
+  <text id="svg_25" class="subtitle" y="170" x="600">Analyse T3 — 12 mai 2026</text>
+  <text id="svg_26" class="subtitle" y="190" x="600">Cabinet d'Orthodontie — Dr. Dupont</text>
+  <text id="svg_27" class="title" y="245" x="290">Mesures principales</text>
+  <line id="svg_28" class="line" y2="255" x2="920" y1="255" x1="290"/>
+  <text id="svg_29" class="val" y="288" x="300">SNA</text>
+  <text id="svg_30" class="val" y="288" x="380">82°</text>
+  <text id="svg_31" class="subtitle" y="288" x="440">Normale</text>
+  <text id="svg_32" class="val" y="316" x="300">SNB</text>
+  <text id="svg_33" class="val" y="316" x="380">78°</text>
+  <text id="svg_34" class="subtitle" y="316" x="440">Légèrement diminué — Rétrognathie mandibulaire</text>
+  <text id="svg_35" class="val" y="344" x="300">ANB</text>
+  <text id="svg_36" class="val" y="344" x="380">4°</text>
+  <text id="svg_37" class="subtitle" y="344" x="440">Augmenté — Classe II squelettique</text>
+  <text id="svg_38" class="val" y="372" x="300">FMA</text>
+  <text id="svg_39" class="val" y="372" x="380">25°</text>
+  <text id="svg_40" class="subtitle" y="372" x="440">Normale — Normodivergent</text>
+  <text id="svg_41" class="val" y="400" x="300">IMPA</text>
+  <text id="svg_42" class="val" y="400" x="380">90°</text>
+  <text id="svg_43" class="subtitle" y="400" x="440">Normale</text>
+  <line id="svg_44" class="line" y2="420" x2="920" y1="420" x1="290"/>
+  <text id="svg_45" class="title" y="445" x="290">Conclusion</text>
+  <text id="svg_46" class="val" y="468" x="290">Patiente présentant une Classe II squelettique par rétrognathie mandibulaire.</text>
+  <text id="svg_47" class="val" y="488" x="290">Divergence faciale normale. Traitement orthodontique en cours.</text>
+  <text id="svg_48" class="val" y="508" x="290">Bonne évolution par rapport à l'analyse T2 (ANB: 4° vs 5°).</text>
+  <line id="svg_49" class="line" y2="550" x2="500" y1="550" x1="290"/>
+  <text id="svg_50" class="val" y="573" x="290">Dr. Dupont</text>
+  <text id="svg_51" class="subtitle" y="590" x="290">Signature numérique</text>
+  <rect stroke="null" id="svg_52" ry="6" rx="6" class="accent" height="30" width="225.000006" y="700" x="720"/>
+  <text id="svg_53" class="accent-text" y="720" x="785">📥 Exporter PDF</text>
+ </g>
+</svg>

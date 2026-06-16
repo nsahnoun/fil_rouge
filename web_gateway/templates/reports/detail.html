@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Rapport #{{ report.id }}{% endblock %}
+{% block content %}
+<div class="page-header">
+    <h1>Rapport #{{ report.id }} — {{ report.patient_name }}</h1>
+    <a href="/reports" class="btn btn-ghost">← Retour</a>
+</div>
+<div class="card" style="max-width:960px">
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px;font-size:13px;align-items:center">
+        <span><strong>Type :</strong> {{ report.report_type }}</span>
+        <span><strong>Statut :</strong> {{ report.status }}</span>
+        <span><strong>Date :</strong> {{ report.created_at[:16] if report.created_at else '—' }}</span>
+        {% if report.has_file %}
+        <a href="/api/reports/{{ report.id }}/download" class="btn btn-primary" style="margin-left:auto" download>
+            ⬇ Télécharger
+        </a>
+        {% endif %}
+    </div>
+
+    {% if report.content_html %}
+    <div style="border:1px solid var(--border-color);border-radius:8px;padding:16px;background:var(--card-bg);overflow:auto;max-height:70vh">
+        {{ report.content_html | safe }}
+    </div>
+    {% elif report.report_type == "canvas_png" and report.has_file %}
+    <div style="text-align:center;border:1px solid var(--border-color);border-radius:8px;padding:16px;background:var(--card-bg)">
+        <img src="/api/reports/{{ report.id }}/download" alt="Rapport image" style="max-width:100%;border-radius:4px">
+    </div>
+    {% elif report.report_type == "canvas_pdf" and report.has_file %}
+    <div style="border:1px solid var(--border-color);border-radius:8px;overflow:hidden;background:var(--card-bg)">
+        <iframe src="/api/reports/{{ report.id }}/download" style="width:100%;height:80vh;border:none"></iframe>
+    </div>
+    {% elif report.report_type == "canvas_json" and report.has_file %}
+    <div style="border:1px solid var(--border-color);border-radius:8px;padding:16px;background:var(--card-bg)">
+        <p>Fichier JSON disponible au téléchargement.</p>
+        <a href="/api/reports/{{ report.id }}/download" class="btn btn-primary" download>⬇ Télécharger le JSON</a>
+    </div>
+    {% else %}
+    <div style="border:1px solid var(--border-color);border-radius:8px;padding:40px 16px;background:var(--card-bg);text-align:center;color:#8899bb">
+        Aucun contenu disponible pour ce rapport.
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

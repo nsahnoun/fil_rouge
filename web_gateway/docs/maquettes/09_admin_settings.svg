@@ -1,0 +1,76 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+ <style>text { font-family: sans-serif; }
+    .title { font-size: 22px; font-weight: bold; fill: #1a1a2e; }
+    .subtitle { font-size: 14px; fill: #666; }
+    .label { font-size: 12px; fill: #555; }
+    .val { font-size: 14px; fill: #222; }
+    .border { fill: none; stroke: #ddd; stroke-width: 1.5; }
+    .border-dark { fill: none; stroke: #999; stroke-width: 1.5; }
+    .fill-light { fill: #f5f5f8; }
+    .fill-white { fill: #fff; }
+    .fill-blue { fill: #e8f0fe; }
+    .fill-green { fill: #e6f4ea; }
+    .fill-yellow { fill: #fef7e0; }
+    .fill-red { fill: #fce8e6; }
+    .accent { fill: #1a73e8; }
+    .accent-text { fill: #fff; font-size: 13px; font-weight: bold; }
+    .icon-box { fill: none; stroke: #bbb; stroke-width: 1.5; rx: 4; }
+    .line { fill: none; stroke: #e0e0e0; stroke-width: 1; }
+    .line-dark { fill: none; stroke: #ccc; stroke-width: 1; }</style>
+
+ <!-- Sidebar -->
+ <!-- Nav items -->
+ <!-- Header -->
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="602" width="802" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_1" class="fill-light border" height="800" width="220" y="0" x="0"/>
+  <rect id="svg_2" fill="#1a1a2e" height="60" width="220" y="0" x="0"/>
+  <text id="svg_3" fill="#fff" font-weight="bold" font-size="18" y="38" x="30">OrthoAnalyse</text>
+  <rect id="svg_4" rx="6" fill="transparent" height="40" width="200" y="80" x="10"/>
+  <text id="svg_5" font-weight="normal" font-size="14" fill="#444" y="105" x="30">Dashboard</text>
+  <rect id="svg_6" rx="6" fill="transparent" height="40" width="200" y="130" x="10"/>
+  <text id="svg_7" font-weight="normal" font-size="14" fill="#444" y="155" x="30">Patients</text>
+  <rect id="svg_8" rx="6" fill="transparent" height="40" width="200" y="180" x="10"/>
+  <text id="svg_9" font-weight="normal" font-size="14" fill="#444" y="205" x="30">Analyses</text>
+  <rect id="svg_10" rx="6" fill="transparent" height="40" width="200" y="230" x="10"/>
+  <text id="svg_11" font-weight="normal" font-size="14" fill="#444" y="255" x="30">Rapports</text>
+  <rect id="svg_12" rx="6" fill="transparent" height="40" width="200" y="280" x="10"/>
+  <text id="svg_13" font-weight="normal" font-size="14" fill="#444" y="305" x="30">Admin</text>
+  <rect id="svg_14" rx="6" fill="#e8f0fe" height="40" width="200" y="330" x="10"/>
+  <text id="svg_15" font-weight="bold" font-size="14" fill="#1a73e8" y="355" x="30">Paramètres</text>
+  <rect id="svg_16" class="fill-white border" height="60" width="980" y="0" x="220"/>
+  <text id="svg_17" class="title" y="35" x="250">Paramètres</text>
+  <text id="svg_18" class="val" text-anchor="end" y="35" x="1100">Dr. Dupont</text>
+  <rect id="svg_19" rx="12" class="icon-box" height="24" width="40" y="18" x="1130"/>
+  <text id="svg_20" font-size="11" class="label" text-anchor="middle" y="35" x="1150">EN</text>
+  <rect id="svg_21" ry="8" rx="8" class="fill-white border" height="460" width="700" y="85" x="250"/>
+  <text id="svg_22" class="title" y="115" x="280">Paramètres du cabinet</text>
+  <text id="svg_23" class="label" y="160" x="280">Nom du cabinet</text>
+  <rect id="svg_24" ry="6" rx="6" class="border fill-white" height="35" width="400" y="170" x="280"/>
+  <text id="svg_25" class="val" y="192" x="295">Cabinet d'Orthodontie Dupont</text>
+  <text id="svg_26" class="label" y="215" x="280">Adresse</text>
+  <rect id="svg_27" ry="6" rx="6" class="border fill-white" height="35" width="400" y="225" x="280"/>
+  <text id="svg_28" class="val" y="247" x="295">12 Rue des Dentistes, 75001 Paris</text>
+  <text id="svg_29" class="label" y="270" x="280">Téléphone</text>
+  <rect id="svg_30" ry="6" rx="6" class="border fill-white" height="35" width="400" y="280" x="280"/>
+  <text id="svg_31" class="val" y="302" x="295">01 23 45 67 89</text>
+  <text id="svg_32" class="label" y="325" x="280">Email</text>
+  <rect id="svg_33" ry="6" rx="6" class="border fill-white" height="35" width="400" y="335" x="280"/>
+  <text id="svg_34" class="val" y="357" x="295">contact@cabinet-dupont.fr</text>
+  <text id="svg_35" class="label" y="380" x="280">Site web</text>
+  <rect id="svg_36" ry="6" rx="6" class="border fill-white" height="35" width="400" y="390" x="280"/>
+  <text id="svg_37" class="val" y="412" x="295">www.cabinet-dupont.fr</text>
+  <text id="svg_38" class="label" y="435" x="280">Langue par défaut</text>
+  <rect id="svg_39" ry="6" rx="6" class="border fill-white" height="35" width="400" y="445" x="280"/>
+  <text id="svg_40" class="val" y="467" x="295">Français</text>
+  <text id="svg_41" class="label" y="490" x="280">Fuseau horaire</text>
+  <rect id="svg_42" ry="6" rx="6" class="border fill-white" height="35" width="400" y="500" x="280"/>
+  <text id="svg_43" class="val" y="522" x="295">Europe/Paris (UTC+1)</text>
+  <rect id="svg_44" ry="6" rx="6" class="accent" height="40" width="150" y="490" x="763"/>
+  <text id="svg_45" class="accent-text" y="514" x="791">💾 Enregistrer</text>
+ </g>
+</svg>

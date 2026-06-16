@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CephAnalysis — {% block title %}Dashboard{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    {% include 'partials/navbar.html' %}
+
+    <div class="container-fluid">
+        <div class="row">
+            {% if show_sidebar | default(true) %}
+            {% include 'partials/sidebar.html' %}
+            {% endif %}
+
+            <main class="col-main">
+                <div id="notification-container"></div>
+                {% block breadcrumbs %}{% endblock %}
+                {% block content %}{% endblock %}
+            </main>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        const saved = localStorage.getItem('ceph-theme');
+        if (saved === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    })();
+    function toggleTheme() {
+        const html = document.documentElement;
+        const current = html.getAttribute('data-theme');
+        const next = current === 'light' ? '' : 'light';
+        if (next) html.setAttribute('data-theme', next);
+        else html.removeAttribute('data-theme');
+        localStorage.setItem('ceph-theme', next || 'dark');
+    }
+    </script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

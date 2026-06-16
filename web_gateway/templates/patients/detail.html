@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% block title %}Patient — {{ patient.first_name }} {{ patient.last_name }}{% endblock %}
+{% block content %}
+<div class="page-header">
+    <h1>{{ patient.first_name }} {{ patient.last_name }}</h1>
+    <div class="flex-row gap-2">
+        <a href="/patients/new?edit={{ patient.id }}" class="btn btn-sm btn-secondary">Modifier</a>
+    </div>
+</div>
+
+<div class="stats-grid" style="grid-template-columns:repeat(auto-fill,minmax(140px,1fr))">
+    <div class="stat-card">
+        <div class="stat-icon">📧</div>
+        <div class="stat-label">Email</div>
+        <div style="font-size:13px;margin-top:4px;word-break:break-all;overflow-wrap:break-word">{{ patient.email or '—' }}</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">📞</div>
+        <div class="stat-label">Téléphone</div>
+        <div style="font-size:13px;margin-top:4px">{{ patient.phone or '—' }}</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">🎂</div>
+        <div class="stat-label">Date naissance</div>
+        <div style="font-size:13px;margin-top:4px">{{ patient.birth_date }}</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">📅</div>
+        <div class="stat-label">Âge</div>
+        <div style="font-size:13px;margin-top:4px">{{ patient.age or '—' }}</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">⚥</div>
+        <div class="stat-label">Genre</div>
+        <div style="font-size:13px;margin-top:4px">{{ patient.gender or '—' }}</div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h2>Radios</h2>
+    </div>
+    <div style="padding:8px 16px 4px">
+        <form id="upload-form" enctype="multipart/form-data" style="display:flex;gap:8px;align-items:end;flex-wrap:wrap">
+            <div class="form-group" style="flex:1;min-width:180px;margin-bottom:0">
+                <label style="font-size:12px;color:var(--text-secondary)">Fichier</label>
+                <input type="file" name="file" accept="image/*" class="form-control" required>
+            </div>
+            <div class="form-group" style="flex:0 0 160px;margin-bottom:0">
+                <label style="font-size:12px;color:var(--text-secondary)">Date d'acquisition</label>
+                <input type="date" name="acquisition_date" class="form-control" id="acq-date">
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-bottom:4px">+ Ajouter</button>
+        </form>
+    </div>
+    <div id="radios-list">
+        <p class="text-muted">Chargement…</p>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h2>Analyses</h2>
+    </div>
+    <div id="analyses-list">
+        <p class="text-muted">Chargement…</p>
+    </div>
+</div>
+{% endblock %}
+{% block extra_js %}
+<script>
+document.getElementById('acq-date').value = new Date().toISOString().split('T')[0];
+
+(async () => {
+    const pid = {{ patient.id }};
+    const listEl = document.getElementById('radios-list');
+    const loadRadios = async () => {
+        const res = await fetch(`/api/radios/by-patient/${pid}`);
+        if (!res.ok) return;
+        const data = await res.json();
+        if (data.length === 0) {
+            listEl.innerHTML = '<div class="empty-state" style="padding:16px"><p>Aucune radio</p></div>';
+            return;
+        }
+        let html = '<div class="table-wrapper"><table class="table"><thead><tr><th>Fichier</th><th>Date</th><th>Dimensions</th><th>Actions</th></tr></thead><tbody>';
+        data.forEach(r => {
+            html += `<tr><td>${r.filename}</td><td>${r.acquisition_date || '—'}</td><td>${r.image_width ? r.image_width + '×' + r.image_height : '—'}</td><td><a href="/api/radios/${r.id}/image" class="btn btn-sm btn-secondary" target="_blank">Afficher</a> <button class="btn btn-sm btn-primary" onclick="createAnalysis(${r.id})">Analyser</button> <button class="btn btn-sm btn-danger" onclick="deleteRadio(${r.id})">Suppr.</button></td></tr>`;
+        });
+        html += '</tbody></table></div>';
+        listEl.innerHTML = html;
+    };
+    await loadRadios();
+    document.getElementById('upload-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const fd = new FormData(e.target);
+        const dateVal = fd.get('acquisition_date');
+        let url = `/api/radios/upload?patient_id=${pid}`;
+        if (dateVal) url += `&acquisition_date=${dateVal}`;
+        const resp = await fetch(url, { method: 'POST', body: fd });
+        if (resp.ok) {
+            await loadRadios();
+            document.getElementById('upload-form').reset();
+            document.getElementById('acq-date').value = new Date().toISOString().split('T')[0];
+        } else {
+            const err = await resp.json();
+            alert(err.detail || 'Erreur upload');
+        }
+    });
+})();
+
+async function deleteRadio(id) {
+    if (!confirm('Supprimer cette radio ?')) return;
+    const resp = await fetch(`/api/radios/${id}`, { method: 'DELETE' });
+    if (resp.ok) location.reload();
+    else alert('Erreur suppression');
+}
+
+async function createAnalysis(radioId) {
+    const resp = await fetch('/api/analyses/create', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ radio_id: radioId }),
+    });
+    if (resp.ok) {
+        const data = await resp.json();
+        window.location.href = `/analyses/${data.id}`;
+    } else {
+        const err = await resp.json();
+        alert(err.detail || 'Erreur création analyse');
+    }
+}
+
+(async () => {
+    const aid = {{ patient.id }};
+    const res = await fetch(`/api/analyses/by-patient/${aid}`);
+    if (res.ok) {
+        const data = await res.json();
+        const el = document.getElementById('analyses-list');
+        if (data.length === 0) { el.innerHTML = '<div class="empty-state" style="padding:16px"><p>Aucune analyse</p></div>'; return; }
+        let html = '<div class="table-wrapper"><table class="table"><thead><tr><th>ID</th><th>Statut</th><th>Version</th><th>Date</th><th>Actions</th></tr></thead><tbody>';
+        data.forEach(a => {
+            html += `<tr><td>${a.id}</td><td><span class="badge badge-${a.status === 'validated' ? 'validated' : a.status === 'pending_review' ? 'pending' : 'draft'}">${a.status}</span></td><td>${a.version}</td><td>${new Date(a.created_at).toLocaleDateString('fr-FR')}</td><td><a href="/analyses/${a.id}" class="btn btn-sm btn-primary">Ouvrir</a></td></tr>`;
+        });
+        html += '</tbody></table></div>';
+        el.innerHTML = html;
+    }
+})();
+</script>
+{% endblock %}

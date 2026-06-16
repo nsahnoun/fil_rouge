@@ -1,0 +1,139 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+ <style>text { font-family: sans-serif; }
+    .title { font-size: 22px; font-weight: bold; fill: #1a1a2e; }
+    .subtitle { font-size: 14px; fill: #666; }
+    .label { font-size: 12px; fill: #555; }
+    .val { font-size: 14px; fill: #222; }
+    .border { fill: none; stroke: #ddd; stroke-width: 1.5; }
+    .border-dark { fill: none; stroke: #999; stroke-width: 1.5; }
+    .fill-light { fill: #f5f5f8; }
+    .fill-white { fill: #fff; }
+    .fill-blue { fill: #e8f0fe; }
+    .fill-green { fill: #e6f4ea; }
+    .fill-yellow { fill: #fef7e0; }
+    .fill-red { fill: #fce8e6; }
+    .accent { fill: #1a73e8; }
+    .accent-text { fill: #fff; font-size: 13px; font-weight: bold; }
+    .icon-box { fill: none; stroke: #bbb; stroke-width: 1.5; rx: 4; }
+    .line { fill: none; stroke: #e0e0e0; stroke-width: 1; }
+    .line-dark { fill: none; stroke: #ccc; stroke-width: 1; }</style>
+
+ <!-- Sidebar -->
+ <!-- Nav items -->
+ <!-- Header -->
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="602" width="802" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_1" class="fill-light border" height="800" width="220" y="0" x="0"/>
+  <rect id="svg_2" fill="#1a1a2e" height="60" width="220" y="0" x="0"/>
+  <text id="svg_3" fill="#fff" font-weight="bold" font-size="18" y="38" x="30">OrthoAnalyse</text>
+  <rect id="svg_4" rx="6" fill="transparent" height="40" width="200" y="80" x="10"/>
+  <text id="svg_5" font-weight="normal" font-size="14" fill="#444" y="105" x="30">Dashboard</text>
+  <rect id="svg_6" rx="6" fill="#e8f0fe" height="40" width="200" y="130" x="10"/>
+  <text id="svg_7" font-weight="bold" font-size="14" fill="#1a73e8" y="155" x="30">Patients</text>
+  <rect id="svg_8" rx="6" fill="transparent" height="40" width="200" y="180" x="10"/>
+  <text id="svg_9" font-weight="normal" font-size="14" fill="#444" y="205" x="30">Analyses</text>
+  <rect id="svg_10" rx="6" fill="transparent" height="40" width="200" y="230" x="10"/>
+  <text id="svg_11" font-weight="normal" font-size="14" fill="#444" y="255" x="30">Rapports</text>
+  <rect id="svg_12" rx="6" fill="transparent" height="40" width="200" y="280" x="10"/>
+  <text id="svg_13" font-weight="normal" font-size="14" fill="#444" y="305" x="30">Admin</text>
+  <rect id="svg_14" rx="6" fill="transparent" height="40" width="200" y="330" x="10"/>
+  <text id="svg_15" font-weight="normal" font-size="14" fill="#444" y="355" x="30">Paramètres</text>
+  <rect id="svg_16" class="fill-white border" height="60" width="980" y="0" x="220"/>
+  <text id="svg_17" class="title" y="35" x="250">Patients</text>
+  <text id="svg_18" class="val" text-anchor="end" y="40" x="1055">Dr. Dupont</text>
+  <rect id="svg_19" rx="12" class="icon-box" height="24" width="40" y="18" x="1130"/>
+  <text id="svg_20" font-size="11" class="label" text-anchor="middle" y="35" x="1150">EN</text>
+  <rect id="svg_21" ry="6" rx="6" class="border fill-white" height="40" width="400" y="85" x="250"/>
+  <text id="svg_22" class="subtitle" y="110" x="270">🔍 Rechercher un patient...</text>
+  <rect stroke="null" id="svg_23" ry="6" rx="6" class="accent" height="40" width="191.999996" y="85" x="668"/>
+  <text id="svg_24" class="accent-text" y="110" x="745">+ Nouveau</text>
+  <rect id="svg_25" ry="6" rx="6" class="fill-light border" height="35" width="570" y="140" x="250"/>
+  <rect id="svg_26" ry="4" rx="4" class="accent" height="22" width="90" y="147" x="270"/>
+  <text id="svg_27" class="accent-text" y="162" x="315">Tous</text>
+  <rect id="svg_28" ry="4" rx="4" class="fill-white border" height="22" width="90" y="147" x="371"/>
+  <text id="svg_29" class="val" y="162" x="415">Actifs</text>
+  <rect stroke="null" id="svg_30" ry="4" rx="4" class="fill-white border" height="22" width="100.999997" y="147" x="470"/>
+  <text id="svg_31" class="val" y="161" x="477">En traitement</text>
+  <rect id="svg_32" ry="4" rx="4" class="fill-white border" height="22" width="90" y="148" x="591"/>
+  <text id="svg_33" class="val" y="163" x="605">Terminés</text>
+  <rect id="svg_34" ry="4" rx="4" class="fill-white border" height="22" width="90" y="148" x="714"/>
+  <text stroke="null" transform="matrix(1.0196015477662215,0,0,1,-6.273680838026067,0) " id="svg_35" class="val" y="162" x="713.038449">Consultation</text>
+  <rect id="svg_36" ry="8" rx="8" class="fill-white border" height="380" width="700" y="195" x="250"/>
+  <rect id="svg_37" ry="4" rx="4" class="fill-light" height="30" width="680" y="195" x="260"/>
+  <text id="svg_38" class="label" y="215" x="270">Patient</text>
+  <text id="svg_39" class="label" y="215" x="430">Âge</text>
+  <text id="svg_40" class="label" y="215" x="490">Sexe</text>
+  <text id="svg_41" class="label" y="215" x="540">Téléphone</text>
+  <text id="svg_42" class="label" y="215" x="630">Dernière analyse</text>
+  <text id="svg_43" class="label" y="215" x="760">Statut</text>
+  <line id="svg_44" class="line" y2="235" x2="940" y1="235" x1="260"/>
+  <text id="svg_45" class="val" y="253" x="270">Martin Sophie</text>
+  <text id="svg_46" class="val" y="253" x="430">28</text>
+  <text id="svg_47" class="val" y="253" x="490">F</text>
+  <text id="svg_48" class="val" y="253" x="540">06 12 34 56 78</text>
+  <text id="svg_49" class="val" y="253" x="630">15/05/2026</text>
+  <rect id="svg_50" ry="4" rx="4" class="fill-white" height="22" width="85" y="238" x="755"/>
+  <text id="svg_51" class="val" y="253" x="797">Traitement</text>
+  <line id="svg_52" class="line" y2="273" x2="940" y1="273" x1="260"/>
+  <text id="svg_53" class="val" y="291" x="270">Dubois Thomas</text>
+  <text id="svg_54" class="val" y="291" x="430">32</text>
+  <text id="svg_55" class="val" y="291" x="490">H</text>
+  <text id="svg_56" class="val" y="291" x="540">06 98 76 54 32</text>
+  <text id="svg_57" class="val" y="291" x="630">12/05/2026</text>
+  <rect id="svg_58" ry="4" rx="4" class="fill-white" height="22" width="85" y="276" x="755"/>
+  <text id="svg_59" class="val" y="291" x="797">Terminé</text>
+  <line id="svg_60" class="line" y2="311" x2="940" y1="311" x1="260"/>
+  <text id="svg_61" class="val" y="329" x="270">Bernard Léa</text>
+  <text id="svg_62" class="val" y="329" x="430">24</text>
+  <text id="svg_63" class="val" y="329" x="490">F</text>
+  <text id="svg_64" class="val" y="329" x="540">07 45 12 89 65</text>
+  <text id="svg_65" class="val" y="329" x="630">10/05/2026</text>
+  <rect id="svg_66" ry="4" rx="4" class="fill-white" height="22" width="85" y="314" x="755"/>
+  <text id="svg_67" class="val" y="329" x="797">Traitement</text>
+  <line id="svg_68" class="line" y2="349" x2="940" y1="349" x1="260"/>
+  <text id="svg_69" class="val" y="367" x="270">Petit Lucas</text>
+  <text id="svg_70" class="val" y="367" x="430">19</text>
+  <text id="svg_71" class="val" y="367" x="490">H</text>
+  <text id="svg_72" class="val" y="367" x="540">06 23 45 67 89</text>
+  <text id="svg_73" class="val" y="367" x="630">08/05/2026</text>
+  <rect id="svg_74" ry="4" rx="4" class="fill-white" height="22" width="85" y="352" x="755"/>
+  <text id="svg_75" class="val" y="367" x="797">Nouveau</text>
+  <line id="svg_76" class="line" y2="387" x2="940" y1="387" x1="260"/>
+  <text id="svg_77" class="val" y="405" x="270">Moreau Emma</text>
+  <text id="svg_78" class="val" y="405" x="430">35</text>
+  <text id="svg_79" class="val" y="405" x="490">F</text>
+  <text id="svg_80" class="val" y="405" x="540">07 89 12 34 56</text>
+  <text id="svg_81" class="val" y="405" x="630">05/05/2026</text>
+  <rect id="svg_82" ry="4" rx="4" class="fill-white" height="22" width="85" y="390" x="755"/>
+  <text id="svg_83" class="val" y="405" x="797">Consultation</text>
+  <line id="svg_84" class="line" y2="425" x2="940" y1="425" x1="260"/>
+  <text id="svg_85" class="val" y="443" x="270">Leroy Nathan</text>
+  <text id="svg_86" class="val" y="443" x="430">27</text>
+  <text id="svg_87" class="val" y="443" x="490">H</text>
+  <text id="svg_88" class="val" y="443" x="540">06 11 22 33 44</text>
+  <text id="svg_89" class="val" y="443" x="630">02/05/2026</text>
+  <rect id="svg_90" ry="4" rx="4" class="fill-white" height="22" width="85" y="428" x="755"/>
+  <text id="svg_91" class="val" y="443" x="797">Traitement</text>
+  <line id="svg_92" class="line" y2="463" x2="940" y1="463" x1="260"/>
+  <text id="svg_93" class="val" y="481" x="270">Garcia Clara</text>
+  <text id="svg_94" class="val" y="481" x="430">22</text>
+  <text id="svg_95" class="val" y="481" x="490">F</text>
+  <text id="svg_96" class="val" y="481" x="540">07 55 66 77 88</text>
+  <text id="svg_97" class="val" y="481" x="630">28/04/2026</text>
+  <rect id="svg_98" ry="4" rx="4" class="fill-white" height="22" width="85" y="466" x="755"/>
+  <text id="svg_99" class="val" y="481" x="797">Terminé</text>
+  <line id="svg_100" class="line" y2="501" x2="940" y1="501" x1="260"/>
+  <text id="svg_101" class="val" y="519" x="270">Mercier Hugo</text>
+  <text id="svg_102" class="val" y="519" x="430">30</text>
+  <text id="svg_103" class="val" y="519" x="490">H</text>
+  <text id="svg_104" class="val" y="519" x="540">06 99 88 77 66</text>
+  <text id="svg_105" class="val" y="519" x="630">25/04/2026</text>
+  <rect id="svg_106" ry="4" rx="4" class="fill-white" height="22" width="85" y="504" x="755"/>
+  <text id="svg_107" class="val" y="519" x="797">Traitement</text>
+  <text id="svg_108" class="subtitle" y="605" x="550">Page 1 sur 3  ← 1 2 3 →</text>
+ </g>
+</svg>

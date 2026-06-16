@@ -1,0 +1,16 @@
+<nav class="navbar">
+    <div class="navbar-brand">
+        <a href="/dashboard">CephAnalysis</a>
+    </div>
+    <div class="navbar-menu">
+        <a href="/dashboard" class="nav-link">Dashboard</a>
+        <a href="/patients" class="nav-link">Patients</a>
+        <a href="/analyses" class="nav-link">Analyses</a>
+        <a href="/reports" class="nav-link">Rapports</a>
+    </div>
+    <div class="navbar-end">
+        <button class="theme-toggle" onclick="toggleTheme()" title="Changer le thème"></button>
+        <span class="navbar-user">{{ current_user.first_name }} {{ current_user.last_name }}</span>
+        <a href="/auth/logout" class="nav-link">Déconnexion</a>
+    </div>
+</nav>

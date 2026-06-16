@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+    @page { size: A4; margin: 20mm; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11pt; color: #333; line-height: 1.5; }
+    .header { text-align: center; border-bottom: 2px solid #4f8ef7; padding-bottom: 10px; margin-bottom: 20px; }
+    .header h1 { font-size: 18pt; color: #1a3a6a; margin-bottom: 4px; }
+    .header p { font-size: 10pt; color: #667; }
+    .patient-info { margin-bottom: 20px; padding: 10px; background: #f5f8ff; border-radius: 6px; }
+    .patient-info h2 { font-size: 13pt; color: #1a3a6a; margin-bottom: 6px; }
+    .patient-info p { font-size: 10pt; margin: 2px 0; }
+    .measurements { margin-bottom: 20px; }
+    .measurements h3 { font-size: 12pt; color: #1a3a6a; border-bottom: 1px solid #ddd; padding-bottom: 4px; margin-bottom: 10px; }
+    .measurements table { width: 100%; border-collapse: collapse; font-size: 10pt; }
+    .measurements th { background: #4f8ef7; color: #fff; padding: 6px 8px; text-align: left; }
+    .measurements td { padding: 4px 8px; border-bottom: 1px solid #eee; }
+    .method-header td { background: #e8f0ff; font-weight: 700; color: #1a3a6a; }
+    .signatures { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; }
+    .signature { margin-top: 20px; }
+    .signature p { font-size: 10pt; margin: 4px 0; }
+    .signature img { max-height: 60px; }
+</style>
+</head>
+<body>
+    <div class="header">
+        <h1>Rapport d'Analyse Céphalométrique</h1>
+        <p>{{ clinic.name }} — {{ clinic.address }}</p>
+    </div>
+
+    <div class="patient-info">
+        <h2>Patient: {{ patient.first_name }} {{ patient.last_name }}</h2>
+        <p>Date naissance: {{ patient.birth_date }}</p>
+        <p>Analyse du: {{ analysis.created_at }}</p>
+        <p>Orthodontiste: {{ orthodontist.first_name }} {{ orthodontist.last_name }}</p>
+    </div>
+
+    <div class="measurements">
+        <h3>Mesures</h3>
+        <table>
+            <thead>
+                <tr><th>Paramètre</th><th>Valeur</th><th>Norme</th><th>Différence</th></tr>
+            </thead>
+            <tbody>
+                {% for method, measures in measurements.items() %}
+                <tr class="method-header"><td colspan="4">{{ method }}</td></tr>
+                {% for name, value in measures.items() %}
+                <tr>
+                    <td>{{ name }}</td>
+                    <td>{{ value.value }} {{ value.unit }}</td>
+                    <td>{{ value.norm }} &plusmn; {{ value.sd }} {{ value.unit }}</td>
+                    <td>{{ value.diff }}</td>
+                </tr>
+                {% endfor %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="signatures">
+        <p>Fait à {{ clinic.city }}, le {{ today.strftime('%d/%m/%Y') }}</p>
+        <div class="signature">
+            <p>Signature de l'orthodontiste:</p>
+            {% if signature_image %}
+            <img src="{{ signature_image }}" alt="Signature">
+            {% endif %}
+            <p>{{ orthodontist.first_name }} {{ orthodontist.last_name }}</p>
+        </div>
+    </div>
+</body>
+</html>
